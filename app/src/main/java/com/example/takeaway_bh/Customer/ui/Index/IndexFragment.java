@@ -1,4 +1,4 @@
-package com.example.takeaway_bh.Customer.ui.notifications;
+package com.example.takeaway_bh.Customer.ui.Index;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,23 +7,25 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.takeaway_bh.databinding.FragmentNotificationsBinding;
+import com.example.takeaway_bh.Customer.CustomerIndex;
+import com.example.takeaway_bh.databinding.FragmentIndexBinding;
 
 
-public class NotificationsFragment extends Fragment {
+public class IndexFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentIndexBinding binding;
+    private String username;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentIndexBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        CustomerIndex activity= (CustomerIndex) getActivity();
+        username= activity.username;
 
         final TextView textView = binding.textNotifications;
         return root;

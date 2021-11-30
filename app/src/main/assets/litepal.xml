@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
     <dbname value="takeaway"></dbname>
-    <version value="2"></version>
+    <version value="4"></version>
     <list>
         <mapping class="com.example.takeaway_bh.Bean.User"></mapping>
+        <mapping class="com.example.takeaway_bh.Bean.Address"></mapping>
+        <mapping class="com.example.takeaway_bh.Bean.CustomerComment"></mapping>
+        <mapping class="com.example.takeaway_bh.Bean.Good"></mapping>
+        <mapping class="com.example.takeaway_bh.Bean.TakeOrder"></mapping>
+        <mapping class="com.example.takeaway_bh.Bean.Store"></mapping>
     </list>
 </litepal>

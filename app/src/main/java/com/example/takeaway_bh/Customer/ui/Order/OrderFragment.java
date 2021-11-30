@@ -1,4 +1,4 @@
-package com.example.takeaway_bh.Customer.ui.dashboard;
+package com.example.takeaway_bh.Customer.ui.Order;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,23 +7,26 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.example.takeaway_bh.databinding.FragmentDashboardBinding;
+import com.example.takeaway_bh.Customer.CustomerIndex;
+import com.example.takeaway_bh.databinding.FragmentOrderBinding;
 
-public class DashboardFragment extends Fragment {
+public class OrderFragment extends Fragment {
 
-    private FragmentDashboardBinding binding;
+    private String username;
+
+    private FragmentOrderBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
 
-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+        binding = FragmentOrderBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        CustomerIndex activity= (CustomerIndex) getActivity();
+        username= activity.username;
 
         final TextView textView = binding.textDashboard;
 

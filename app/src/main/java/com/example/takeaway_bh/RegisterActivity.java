@@ -35,7 +35,6 @@ public class RegisterActivity extends BaseActivity {
             Log.d("Register","isRider is "+u.isRider());
         }
 
-
         binding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

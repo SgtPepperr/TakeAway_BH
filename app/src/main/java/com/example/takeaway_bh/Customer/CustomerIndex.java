@@ -1,5 +1,6 @@
 package com.example.takeaway_bh.Customer;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.takeaway_bh.BaseActivity;
@@ -7,6 +8,7 @@ import com.example.takeaway_bh.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -17,10 +19,16 @@ import com.example.takeaway_bh.databinding.ActivityCustomerIndexBinding;
 public class CustomerIndex extends BaseActivity {
 
     private ActivityCustomerIndexBinding binding;
-
+    public String username;
+    private Fragment myFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent in=getIntent();
+        username=in.getStringExtra("login.username");
+        myFragment=getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_customer_index);
+
 
         binding = ActivityCustomerIndexBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -29,7 +37,7 @@ public class CustomerIndex extends BaseActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_home, R.id.navigation_index, R.id.navigation_order)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_customer_index);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);

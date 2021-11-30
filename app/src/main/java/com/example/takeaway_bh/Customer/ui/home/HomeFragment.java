@@ -12,10 +12,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.takeaway_bh.Customer.CustomerIndex;
 import com.example.takeaway_bh.databinding.FragmentHomeBinding;
 
 
 public class HomeFragment extends Fragment {
+
+    private String username;
 
     private FragmentHomeBinding binding;
 
@@ -25,6 +28,9 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        CustomerIndex activity= (CustomerIndex) getActivity();
+        username= activity.username;
 
         final TextView textView = binding.textHome;
 

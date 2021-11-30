@@ -100,9 +100,11 @@ public class LoginActivity extends BaseActivity {
                         editor.apply();
                         if (binding.chooseway.isChecked()) {
                             Intent intent = new Intent(LoginActivity.this, RiderIndex.class);
+                            intent.putExtra("login.username",account);
                             startActivity(intent);
                         }else{
                             Intent intent=new Intent(LoginActivity.this, CustomerIndex.class);
+                            intent.putExtra("login.username",account);
                             startActivity(intent);
                         }
                         finish();
