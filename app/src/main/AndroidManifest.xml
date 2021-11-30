@@ -3,18 +3,38 @@
     package="com.example.takeaway_bh">
 
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TakeAway_BH">
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".LoginActivity"
+        <activity android:name=".Customer.CustomerIndex"
+            android:label="用户主界面"
+            android:exported="true"/>
+        <activity
+            android:name=".Rider.RiderIndex"
+            android:exported="true"
+            android:label="骑手主界面"/>
+        <activity
+            android:name=".Manage.ManageIndex"
+            android:label="管理员主界面"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:label="注册页面"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="登录页面">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

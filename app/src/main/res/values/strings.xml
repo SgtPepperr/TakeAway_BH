@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TakeAway_BH</string>
+    <string name="title_activity_customer_index">CustomerIndex</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

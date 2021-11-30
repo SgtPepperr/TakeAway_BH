@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
-
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -42,36 +44,19 @@
         android:background="@drawable/password_edit_text"
         android:paddingLeft="40dp"/>
 
-
-    <LinearLayout
-        android:layout_marginTop="3dp"
+    <EditText
+        android:id="@+id/password2"
+        android:inputType="textPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:weightSum="2">
-        <CheckBox
-            android:id="@+id/remember"
-            android:text="记住密码"
-            android:textColor="@color/colorPrimary"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <CheckBox
-            android:id="@+id/chooseway"
-            android:text="骑手登录"
-            android:textColor="@color/colorPrimary"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/forget"
-            android:text="忘记密码？"
-            android:layout_weight="1"
-            android:textColor="@color/colorPrimary"
-            android:gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_marginTop="20dp"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:hint="确认密码"
+        android:textCursorDrawable="@null"
+        android:background="@drawable/password_edit_text"
+        android:paddingLeft="40dp"/>
 
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -79,22 +64,20 @@
         android:gravity="center"
         android:layout_marginTop="50dp">
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/button_blue"
-            android:gravity="center"
-            android:text="登录"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+        <CheckBox
+            android:id="@+id/chooseway"
+            android:text="骑手身份"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/register"
             android:text="注册"
             android:textSize="18sp"
             android:background="@drawable/button_blue"
             android:gravity="center"
+            android:layout_weight="1"
             android:layout_marginLeft="40dp"
             android:textColor="@color/white"
             android:layout_width="100dp"

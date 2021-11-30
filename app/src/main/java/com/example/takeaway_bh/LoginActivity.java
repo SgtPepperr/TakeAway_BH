@@ -4,17 +4,30 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.takeaway_bh.Bean.User;
+import com.example.takeaway_bh.Customer.CustomerIndex;
+import com.example.takeaway_bh.Manage.ManageIndex;
+import com.example.takeaway_bh.Rider.RiderIndex;
+import com.example.takeaway_bh.databinding.ActivityLoginBinding;
+import com.example.takeaway_bh.databinding.ActivityMainBinding;
+
+import org.litepal.LitePal;
+
+import java.util.List;
 
 
 public class LoginActivity extends BaseActivity {
 
     private SharedPreferences pref;
+
+    private ActivityLoginBinding binding;
 
     private SharedPreferences.Editor editor;
 
@@ -29,45 +42,90 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        pref= PreferenceManager.getDefaultSharedPreferences(this);
-        accountEdit = (EditText) findViewById(R.id.account);
-        passwordEdit = (EditText) findViewById(R.id.password);
-        remeberPass=findViewById(R.id.remeber_pass);
-        login = (Button) findViewById(R.id.login);
-        boolean isRemember=pref.getBoolean("remember password",false);
-        if(isRemember){
-            String account=pref.getString("account","");
-            String password=pref.getString("password","");
+
+        binding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+
+        //setContentView(R.layout.activity_login);
+        pref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        accountEdit = binding.username;
+        passwordEdit = binding.password;
+        remeberPass = binding.remember;
+        login = binding.login;
+
+        boolean isRemember = pref.getBoolean("remember password", false);
+        if (isRemember) {
+            String account = pref.getString("account", "");
+            String password = pref.getString("password", "");
             accountEdit.setText(account);
             passwordEdit.setText(password);
             remeberPass.setChecked(true);
         }
+
+        List<User> users= LitePal.findAll(User.class);
+        for(User u:users){
+            Log.d("Login","username is "+u.getUsername());
+            Log.d("Login","password is "+u.getPassword());
+            Log.d("Login","isRider is "+u.isRider());
+        }
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String account = accountEdit.getText().toString();
                 String password = passwordEdit.getText().toString();
+
+                List<User> users = LitePal.where("username=?", account).find(User.class);
                 // 如果账号是admin且密码是123456，就认为登录成功
-                if (account.equals("admin") && password.equals("123456")) {
-                    editor=pref.edit();
-                    if(remeberPass.isChecked()){
-                        editor.putBoolean("remember password",true);
-                        editor.putString("account",account);
-                        editor.putString("password",password);
-                    }else{
-                        editor.clear();
-                    }
-                    editor.apply();
-                    Intent intent = new Intent(LoginActivity.this, com.example.takeaway_bh.MainActivity.class);
-                    startActivity(intent);
-                    finish();
+                if (users.size() == 0) {
+                    Log.d("Login","user is 0");
+                    Toast.makeText(LoginActivity.this, "用户不存在，请先注册", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(LoginActivity.this, "account or password is invalid",
-                            Toast.LENGTH_SHORT).show();
+                    String pass = users.get(0).getPassword();
+                    if (!pass.equals(password)) {
+
+                        Log.d("Login","password is wrong");
+                        Toast.makeText(LoginActivity.this, "用户密码不正确", Toast.LENGTH_SHORT).show();
+                    } else {
+                        editor = pref.edit();
+                        if (remeberPass.isChecked()) {
+                            editor.putBoolean("remember password", true);
+                            editor.putString("account", account);
+                            editor.putString("password", password);
+                        } else {
+                            editor.clear();
+                        }
+                        editor.apply();
+                        if (binding.chooseway.isChecked()) {
+                            Intent intent = new Intent(LoginActivity.this, RiderIndex.class);
+                            startActivity(intent);
+                        }else{
+                            Intent intent=new Intent(LoginActivity.this, CustomerIndex.class);
+                            startActivity(intent);
+                        }
+                        finish();
+                    }
                 }
             }
         });
-    }
 
+        binding.register.setOnClickListener(new View.OnClickListener() {         //进入注册页面
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.profileHead.setOnClickListener(new View.OnClickListener() {      //进入管理员界面
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, ManageIndex.class);
+                startActivity(intent);
+            }
+        });
+
+    }
 }
