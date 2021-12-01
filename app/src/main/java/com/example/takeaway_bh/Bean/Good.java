@@ -3,7 +3,8 @@ package com.example.takeaway_bh.Bean;
 import org.litepal.crud.LitePalSupport;
 
 public class Good extends LitePalSupport {
-    private String name,introduction,picture,StoreName;
+    private String name,introduction,StoreName;
+    private int imageId;
     private float price;
     private int sales,discount;
 
@@ -31,12 +32,12 @@ public class Good extends LitePalSupport {
         this.introduction = introduction;
     }
 
-    public String getPicture() {
-        return picture;
+    public int getImageId() {
+        return imageId;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
     }
 
     public float getPrice() {

@@ -72,12 +72,6 @@ public class LoginActivity extends BaseActivity {
             Log.d("Login","isRider is "+u.isRider());
         }
 
-        List<Store> stores= LitePal.findAll(Store.class);
-        for(Store s:stores){
-            s.setImageId(R.drawable.apple_pic);
-            s.save();
-        }
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,9 +86,11 @@ public class LoginActivity extends BaseActivity {
                 } else {
                     String pass = users.get(0).getPassword();
                     if (!pass.equals(password)) {
-
                         Log.d("Login","password is wrong");
                         Toast.makeText(LoginActivity.this, "用户密码不正确", Toast.LENGTH_SHORT).show();
+                    }else if(binding.chooseway.isChecked()!=users.get(0).isRider()){
+                        Log.d("Login","身份不匹配鸭兄弟");
+                        Toast.makeText(LoginActivity.this, "身份不匹配", Toast.LENGTH_SHORT).show();
                     } else {
                         editor = pref.edit();
                         if (remeberPass.isChecked()) {
@@ -114,7 +110,7 @@ public class LoginActivity extends BaseActivity {
                             intent.putExtra("login.username",account);
                             startActivity(intent);
                         }
-                        finish();
+//                        finish();
                     }
                 }
             }

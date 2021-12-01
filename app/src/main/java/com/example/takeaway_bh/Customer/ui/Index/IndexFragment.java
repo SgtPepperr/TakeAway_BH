@@ -1,6 +1,7 @@
 package com.example.takeaway_bh.Customer.ui.Index;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.takeaway_bh.Bean.Store;
 import com.example.takeaway_bh.Customer.CustomerIndex;
 import com.example.takeaway_bh.Customer.StoreAdapter;
+import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.FragmentIndexBinding;
 
 import org.litepal.LitePal;
@@ -35,6 +37,13 @@ public class IndexFragment extends Fragment {
 
         CustomerIndex activity= (CustomerIndex) getActivity();
         username= activity.username;
+
+        List<Store> stores= LitePal.findAll(Store.class);
+        for(Store s:stores){
+            s.setImageId(R.drawable.apple_pic);
+            Log.d("LoginActivity","storename is"+s.getStoreName());
+            s.save();
+        }
 
         storeList= LitePal.findAll(Store.class);
 
