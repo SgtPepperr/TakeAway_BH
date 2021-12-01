@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/drawable/check_selector.xml" value="0.1" />
         <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/layout/activity_add_good.xml" value="0.1983695652173913" />
         <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/layout/activity_customer_index.xml" value="0.18795289855072464" />

@@ -16,6 +16,8 @@ import com.example.takeaway_bh.Customer.CustomerIndex;
 import com.example.takeaway_bh.Customer.StoreAdapter;
 import com.example.takeaway_bh.databinding.FragmentIndexBinding;
 
+import org.litepal.LitePal;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +35,8 @@ public class IndexFragment extends Fragment {
 
         CustomerIndex activity= (CustomerIndex) getActivity();
         username= activity.username;
+
+        storeList= LitePal.findAll(Store.class);
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(activity);
         binding.recyclerStore.setLayoutManager(layoutManager);

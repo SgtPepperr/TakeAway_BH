@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.takeaway_bh.Bean.Store;
 import com.example.takeaway_bh.Bean.User;
 import com.example.takeaway_bh.Customer.CustomerIndex;
 import com.example.takeaway_bh.Manage.ManageIndex;
@@ -71,6 +72,12 @@ public class LoginActivity extends BaseActivity {
             Log.d("Login","isRider is "+u.isRider());
         }
 
+        List<Store> stores= LitePal.findAll(Store.class);
+        for(Store s:stores){
+            s.setImageId(R.drawable.apple_pic);
+            s.save();
+        }
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,6 +135,8 @@ public class LoginActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 }

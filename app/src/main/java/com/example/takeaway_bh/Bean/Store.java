@@ -1,5 +1,7 @@
 package com.example.takeaway_bh.Bean;
 
+import com.example.takeaway_bh.R;
+
 import org.litepal.annotation.Column;
 import org.litepal.crud.LitePalSupport;
 
