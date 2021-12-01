@@ -6,7 +6,16 @@ import org.litepal.crud.LitePalSupport;
 public class Store extends LitePalSupport {
     @Column(unique = true)
     private String StoreName;
+    private int imageId;
     private String introduction;
+
+    public int getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(int imageId) {
+        this.imageId = imageId;
+    }
 
     public String getStoreName() {
         return StoreName;

@@ -28,7 +28,7 @@ public class OrderFragment extends Fragment {
         CustomerIndex activity= (CustomerIndex) getActivity();
         username= activity.username;
 
-        final TextView textView = binding.textDashboard;
+        final TextView textView = binding.textOrder;
 
         return root;
     }

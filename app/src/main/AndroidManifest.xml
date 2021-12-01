@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TakeAway_BH">
         <activity
+            android:name=".Customer.StoreIndex"
+            android:exported="true" />
+        <activity
             android:name=".Manage.AddGood"
             android:exported="true"
-            android:label="增加菜品"/>
+            android:label="增加菜品" />
         <activity
             android:name=".Customer.CustomerIndex"
             android:exported="true"

@@ -33,7 +33,7 @@ public class AddGood extends AppCompatActivity {
                 float price=binding.price.getAlpha();
 
                 List<Good> goods= LitePal.where("StoreName = ? and name = ?",storename,goodname).find(Good.class);
-                if(goods.size()==0){
+                if(goods.size()!=0){
                     Toast.makeText(AddGood.this,"该商品已存在,请修改信息",Toast.LENGTH_SHORT).show();
                 }else{
                     Good good=new Good();
