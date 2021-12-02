@@ -32,8 +32,6 @@ public class HomeFragment extends Fragment {
         CustomerIndex activity= (CustomerIndex) getActivity();
         username= activity.username;
 
-        final TextView textView = binding.textHome;
-
         return root;
     }
 

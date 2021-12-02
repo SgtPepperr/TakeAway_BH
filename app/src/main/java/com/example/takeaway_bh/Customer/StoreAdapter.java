@@ -47,6 +47,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolder> 
                 int position=holder.getAdapterPosition();
                 Store store=mStoreList.get(position);
                 Intent intent=new Intent(view.getContext(),StoreIndex.class);
+                intent.putExtra("StoreName",store.getStoreName());
                 parent.getContext().startActivity(intent);
             }
         });

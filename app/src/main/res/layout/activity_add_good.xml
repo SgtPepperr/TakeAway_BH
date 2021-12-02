@@ -33,7 +33,7 @@
         android:layout_marginTop="20dp"
         android:hint="菜品价格"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/add"

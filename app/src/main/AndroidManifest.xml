@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TakeAway_BH">
         <activity
-            android:name=".Customer.StoreIndex"
-            android:label="店铺页面"
+            android:name=".Customer.PaymentFinish"
             android:exported="true" />
+        <activity
+            android:name=".Customer.GoodIndex"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.StoreIndex"
+            android:exported="true"
+            android:label="店铺页面" />
         <activity
             android:name=".Manage.AddGood"
             android:exported="true"
@@ -35,13 +41,17 @@
             android:label="注册页面"
             android:parentActivityName=".LoginActivity" />
         <activity
+            android:name=".Customer.Payment"
+            android:exported="true"
+            android:label="支付" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:launchMode="singleTask"
-            android:label="登录页面">
+            android:label="登录页面"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

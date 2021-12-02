@@ -21,6 +21,24 @@
         <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/layout/store_item.xml" value="0.1" />
         <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/menu/bottom_nav_menu.xml" value="0.4466666666666667" />
         <entry key="..\:/AndroidStudio/TakeAway_BH/app/src/main/res/xml/litepal.xml" value="0.18795289855072464" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_add_good.xml" value="0.14791666666666667" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_customer_index.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_good_index.xml" value="0.17291666666666666" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_manage_index.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_payment.xml" value="0.264" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_payment_finish.xml" value="0.176" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_rider_index.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_store_index.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/fragment_index.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/good_item.xml" value="0.14791666666666667" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/order_information.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/order_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/payment_good_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/store_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25364583333333335" />
       </map>
     </option>
   </component>

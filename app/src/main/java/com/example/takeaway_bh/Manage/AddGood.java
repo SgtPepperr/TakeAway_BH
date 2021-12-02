@@ -30,7 +30,7 @@ public class AddGood extends AppCompatActivity {
             public void onClick(View view) {
                 String storename=binding.storename.getText().toString();
                 String goodname=binding.goodname.getText().toString();
-                float price=binding.price.getAlpha();
+                float price = Float.valueOf(binding.price.getText().toString());
 
                 List<Good> goods= LitePal.where("StoreName = ? and name = ?",storename,goodname).find(Good.class);
                 if(goods.size()!=0){

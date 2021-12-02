@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.takeaway_bh.Bean.Good;
 import com.example.takeaway_bh.Bean.Store;
 import com.example.takeaway_bh.Bean.User;
 import com.example.takeaway_bh.Customer.CustomerIndex;
@@ -43,6 +44,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initLitePal();
 
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -132,7 +134,40 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
+    }
 
+    private void initLitePal() {
+        Store store = new Store();
+        store.setStoreName("store2");
+        store.setImageId(R.drawable.apple_pic);
+        store.setIntroduction("no introduction");
+        store.save();
+        Store store1 = new Store();
+        store1.setStoreName("store1");
+        store1.setImageId(R.drawable.banana_pic);
+        store1.setIntroduction("no introduction");
+        store1.save();
 
+        Good good = new Good();
+        good.setImageId(R.drawable.apple_pic);
+        good.setName("apple");
+        good.setIntroduction("this is an apple");
+        good.setStoreName("store1");
+        good.setPrice(2);
+        good.save();
+        Good good1 = new Good();
+        good1.setImageId(R.drawable.apple_pic);
+        good1.setName("apple");
+        good1.setIntroduction("this is an apple");
+        good1.setStoreName("store2");
+        good1.setPrice(3);
+        good1.save();
+        Good good2 = new Good();
+        good2.setImageId(R.drawable.banana_pic);
+        good2.setName("banana");
+        good2.setIntroduction("this is a banana");
+        good2.setStoreName("store1");
+        good2.setPrice(Float.valueOf("2.5"));
+        good2.save();
     }
 }

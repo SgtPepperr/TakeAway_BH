@@ -40,8 +40,7 @@ public class IndexFragment extends Fragment {
 
         List<Store> stores= LitePal.findAll(Store.class);
         for(Store s:stores){
-            s.setImageId(R.drawable.apple_pic);
-            Log.d("LoginActivity","storename is"+s.getStoreName());
+            Log.d("LoginActivity","storename is "+s.getStoreName());
             s.save();
         }
 
