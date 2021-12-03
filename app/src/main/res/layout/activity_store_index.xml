@@ -72,7 +72,7 @@
                 android:background="@drawable/car" />
 
             <TextView
-                android:id="@+id/count"
+                android:id="@+id/countnum"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
