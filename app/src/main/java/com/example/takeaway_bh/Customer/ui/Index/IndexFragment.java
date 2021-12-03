@@ -42,6 +42,8 @@ public class IndexFragment extends Fragment {
         binding.imageView2.setImageResource(R.drawable.banana_pic);
         for(Store s:stores){
             Log.d("LoginActivity","storename is "+s.getStoreName());
+            s.setImageId(R.drawable.banana_pic);
+            s.save();
 //            s.save();
         }
 
