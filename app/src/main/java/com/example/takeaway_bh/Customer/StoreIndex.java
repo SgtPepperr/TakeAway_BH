@@ -31,33 +31,39 @@ import java.util.Map;
 public class StoreIndex extends BaseActivity {
     private List<Good> list = new ArrayList<>();
     private ActivityStoreIndexBinding binding;
+    private String StoreName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_store_index);
         Intent intent = getIntent();
-        list = LitePal.where("StoreName=?", intent.getStringExtra("StoreName")).find(Good.class);
-        for(Good s : list){
-            Log.d("StoreIndex","GoodName is "+s.getName() + " StoreName is " + s.getStoreName());
+        StoreName=intent.getStringExtra("StoreName");
+
+        list = LitePal.where("StoreName=?", StoreName).find(Good.class);
+
+        for(Good s : list){                                                //调试+初始化
+//            Log.d("StoreIndex","GoodName is "+s.getName() + " StoreName is " + s.getStoreName());
+            s.setImageId(R.drawable.apple_pic);
             s.save();
         }
-        list = LitePal.where("StoreName=?", intent.getStringExtra("StoreName")).find(Good.class);
+//        list = LitePal.where("StoreName=?", StoreName).find(Good.class);
 
         binding = ActivityStoreIndexBinding.inflate(getLayoutInflater());
         LinearLayoutManager layoutManager=new LinearLayoutManager(StoreIndex.this);
         binding.storeListView.setLayoutManager(layoutManager);
         GoodAdapter adapter=new GoodAdapter(list);
         binding.storeListView.setAdapter(adapter);
+        binding.storeImage.setImageResource(R.drawable.banana_pic);
         setContentView(binding.getRoot());
 
-        View view = findViewById(R.id.floatingButton);
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(StoreIndex.this, Payment.class);
-                startActivity(intent);
-            }
-        });
+//        View view = findViewById(R.id.floatingButton);
+//        view.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(StoreIndex.this, Payment.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

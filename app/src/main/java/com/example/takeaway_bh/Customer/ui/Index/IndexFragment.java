@@ -27,7 +27,7 @@ import java.util.List;
 public class IndexFragment extends Fragment {
     private List<Store> storeList=new ArrayList<>();
     private FragmentIndexBinding binding;
-    private String username;
+//    private String username;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -36,12 +36,13 @@ public class IndexFragment extends Fragment {
         View root = binding.getRoot();
 
         CustomerIndex activity= (CustomerIndex) getActivity();
-        username= activity.username;
+//        username= activity.username;
 
         List<Store> stores= LitePal.findAll(Store.class);
         binding.imageView2.setImageResource(R.drawable.banana_pic);
+
         for(Store s:stores){
-            Log.d("LoginActivity","storename is "+s.getStoreName());
+            Log.d("LoginActivity","storename is "+s.getStoreName());                      //调试模块部分，对商店图片信息进行初始化
             s.setImageId(R.drawable.banana_pic);
             s.save();
 //            s.save();
