@@ -39,9 +39,10 @@ public class IndexFragment extends Fragment {
         username= activity.username;
 
         List<Store> stores= LitePal.findAll(Store.class);
+        binding.imageView2.setImageResource(R.drawable.banana_pic);
         for(Store s:stores){
             Log.d("LoginActivity","storename is "+s.getStoreName());
-            s.save();
+//            s.save();
         }
 
         storeList= LitePal.findAll(Store.class);

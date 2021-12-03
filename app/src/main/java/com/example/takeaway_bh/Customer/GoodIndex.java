@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.takeaway_bh.BaseActivity;
 import com.example.takeaway_bh.R;
 
-public class GoodIndex extends AppCompatActivity {
+public class GoodIndex extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
