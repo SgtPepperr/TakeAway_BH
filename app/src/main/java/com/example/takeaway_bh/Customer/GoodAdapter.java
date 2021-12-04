@@ -20,19 +20,11 @@ import java.util.List;
 
 public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
     public static List<Good> mGoodList;
+    private TextView m_count;
+    private TextView m_price;
     private HashMap<String, Integer> map = new HashMap<>();
-    private int count = 0;
+    private int countnums = 0;
     private float price = 0;
-
-    public interface onItemClickListener {
-        void onItemClick(View view,int position);
-    }
-
-    private onItemClickListener monItemClickListener;
-
-    public void setonItemClickListener(onItemClickListener monItemClickListener) {
-        this.monItemClickListener = monItemClickListener;
-    }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
         View goodView;
@@ -57,13 +49,13 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
 
     }
 
-    public GoodAdapter(List<Good> mGoodList) {
+    public GoodAdapter(List<Good> mGoodList, TextView m_count, TextView m_price) {
         this.mGoodList = mGoodList;
 //        Log.d("GoodAdapter","wuwu");
 //        Log.d("GoodAdapter", String.valueOf(m_count==null));
 //        Log.d("GoodAdapter",m_count.toString());
-//        this.m_count = m_count;
-//        this.m_price = m_price;
+        this.m_count = m_count;
+        this.m_price = m_price;
     }
 
     @NonNull
@@ -96,39 +88,54 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
         Log.d("GoodAdapter", "price is " + good.getPrice());
         holder.goodPrice.setText(String.valueOf(good.getPrice()));
 
-        if(monItemClickListener!=null){
-            holder.goodAdd.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    int pos=holder.getLayoutPosition();
-                    monItemClickListener.onItemClick(holder.goodView,pos);
+        holder.goodAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int pos = holder.getLayoutPosition();
+                Good good = mGoodList.get(pos);
+                int cou = 0;
+                if (map.containsKey(good.getName())) {
+                    cou = map.get(good.getName());
                 }
-            });
-        }
-//        holder.goodAdd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-////                Log.d("GoodAdapter","wuwu");
-////                Log.d("GoodAdapter", String.valueOf(m_count==null));
-////                Log.d("GoodAdapter",m_count.toString());
-////                Log.d("GoodAdapter",m_price.toString());
-////                Log.d("GoodAdapter",holder.goodCount.toString());
-////                Log.d("GoodAdapter",holder.goodSub.toString());
-////                Log.d("GoodAdapter",holder.goodCount.toString());
-//                int cou=0;
-//                if (map.containsKey(good.getName())) {
-//                    cou = map.get(good.getName());
-//                }
-//                map.put(good.getName(), cou + 1);
-//                holder.goodCount.setVisibility(View.VISIBLE);
-//                holder.goodSub.setVisibility(View.VISIBLE);
-//                holder.goodCount.setText(String.valueOf(cou+1));
-//                count++;
-//                price += good.getPrice();
-//                m_count.setText(count);
-//                m_price.setText("$" + price);
-//            }
-//        });
+                map.put(good.getName(), cou + 1);
+                View v=holder.goodView;
+                TextView goodCount = v.findViewById(R.id.count);
+                View goodSub = v.findViewById(R.id.store_minus);
+                goodCount.setVisibility(View.VISIBLE);
+                goodSub.setVisibility(View.VISIBLE);
+                goodCount.setText(String.valueOf(cou + 1));
+                countnums++;
+                price += good.getPrice();
+                m_count.setText(String.valueOf(countnums));
+                m_price.setText("￥" + price);
+            }
+        });
+
+        holder.goodSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int pos = holder.getLayoutPosition();
+                Good good = mGoodList.get(pos);
+                int  cou = map.get(good.getName());
+
+                map.put(good.getName(), cou -1);
+                View v=holder.goodView;
+                TextView goodCount = v.findViewById(R.id.count);
+                View goodSub = v.findViewById(R.id.store_minus);
+
+                goodCount.setText(String.valueOf(cou - 1));
+                countnums--;
+                price -= good.getPrice();
+                m_count.setText(String.valueOf(countnums));
+                m_price.setText("￥" + price);
+
+                if(cou==1){
+                    goodCount.setVisibility(View.GONE);
+                    goodSub.setVisibility(View.GONE);
+                }
+            }
+        });
+
     }
 
     @Override

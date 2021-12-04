@@ -26,7 +26,8 @@
         <activity
             android:name=".Customer.CustomerIndex"
             android:exported="true"
-            android:label="用户主界面" />
+            android:label="用户主界面"
+            android:launchMode="singleTask"/>
         <activity
             android:name=".Rider.RiderIndex"
             android:exported="true"

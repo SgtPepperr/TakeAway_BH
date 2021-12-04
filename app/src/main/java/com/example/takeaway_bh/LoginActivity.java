@@ -103,6 +103,7 @@ public class LoginActivity extends BaseActivity {
                             editor.clear();
                         }
                         editor.apply();
+                        MyApp.setUserName(account);
                         if (binding.chooseway.isChecked()) {
                             Intent intent = new Intent(LoginActivity.this, RiderIndex.class);
                             intent.putExtra("login.username",account);
