@@ -3,6 +3,7 @@ package com.example.takeaway_bh.Customer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.example.takeaway_bh.Bean.TakeOrder;
@@ -31,6 +32,7 @@ public class OrderInfo extends AppCompatActivity {
         address.setText(order.getAddress());
         phone.setText(order.getReceive_phone());
         text.setText(order.getCustomer_text());
+        Log.d("OrderInfo",order.getTakeorder_time());
         take_order_time.setText(order.getTakeorder_time());
         if(order.isOver()){
             state.setText("订单状态：已完成");

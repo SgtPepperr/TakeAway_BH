@@ -3,11 +3,14 @@ package com.example.takeaway_bh;
 import android.app.Application;
 import android.content.Context;
 
+import com.example.takeaway_bh.Bean.TakeOrder;
+
 import org.litepal.LitePal;
+
+import java.util.List;
 
 public class MyApp extends Application {
     private static Context context;
-    private static int id=0;
     private static String UserName;
 
     @Override
@@ -26,7 +29,7 @@ public class MyApp extends Application {
     }
 
     public static int getId() {
-        return ++id;
+        return LitePal.where("customer_user is ?",UserName).find(TakeOrder.class).size()+1;
     }
 
     public static Context getContext() {
