@@ -7,6 +7,33 @@
     android:orientation="vertical"
     tools:context=".Customer.ui.home.HomeFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:background="#87ceeb"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/change_address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="修改地址"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/stroke"
@@ -61,7 +88,10 @@
         <TextView
             android:id="@+id/user_id"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>/>
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <View
@@ -86,12 +116,44 @@
         <TextView
             android:id="@+id/user_nickname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/stroke" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="骑手"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/user_if_rider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stroke" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -110,18 +172,15 @@
         <TextView
             android:id="@+id/user_address"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/spacing_minor"
-            android:src="@drawable/ic_arrow_right" />
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/stroke" />
-
 
 </LinearLayout>

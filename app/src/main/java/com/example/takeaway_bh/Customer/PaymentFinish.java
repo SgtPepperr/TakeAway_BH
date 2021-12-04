@@ -6,9 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.takeaway_bh.BaseActivity;
 import com.example.takeaway_bh.R;
 
-public class PaymentFinish extends AppCompatActivity {
+public class PaymentFinish extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

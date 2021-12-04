@@ -49,6 +49,13 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
+            android:name=".Customer.AddComment"
+            android:exported="true"
+            android:label="评论" />
+        <activity android:name=".Customer.ChangeAddress"
+            android:exported="true"
+            android:label="修改地址"/>
+        <activity
             android:name=".LoginActivity"
             android:exported="true"
             android:label="登录页面"
