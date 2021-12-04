@@ -33,10 +33,13 @@ public class HomeFragment extends Fragment {
 
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
+
         root = binding.getRoot();
 
         CustomerIndex activity= (CustomerIndex) getActivity();
         username= activity.username;
+
+        binding.userId.setText(username);
 
         return root;
     }

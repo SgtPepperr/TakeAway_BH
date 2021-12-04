@@ -33,7 +33,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_cost"
+                android:id="@+id/info_tv_cost"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
@@ -41,7 +41,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/business_nameAndId"
+                android:id="@+id/info_business_nameAndId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -98,7 +98,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/payment_address"
+            android:id="@+id/info_payment_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -128,7 +128,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/payment_phone"
+            android:id="@+id/info_payment_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -158,7 +158,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/payment_text"
+            android:id="@+id/info_payment_text"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
@@ -210,10 +210,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="骑手接单时间:"/>
+            android:text="订单发起时间:"/>
 
         <TextView
-            android:id="@+id/take_order_time"
+            android:id="@+id/info_take_order_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>

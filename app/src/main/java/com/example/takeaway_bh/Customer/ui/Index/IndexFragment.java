@@ -34,7 +34,6 @@ public class IndexFragment extends Fragment {
 
         binding = FragmentIndexBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        binding.imageView2.setImageResource(R.drawable.ic_launcher_background);
 
         CustomerIndex activity= (CustomerIndex) getActivity();
 //        username= activity.username;

@@ -7,8 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -18,6 +22,10 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         com.example.takeaway_bh.ActivityCollector.addActivity(this);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");// HH:mm:ss
+//获取当前时间
+        Date date = new Date(System.currentTimeMillis());
+        Log.d("BaseActivity",simpleDateFormat.format(date));
     }
 
     @Override
@@ -62,7 +70,6 @@ public class BaseActivity extends AppCompatActivity {
             });
             builder.show();
         }
-
     }
 
 }

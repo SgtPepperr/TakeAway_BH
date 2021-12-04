@@ -6,7 +6,7 @@ public class TakeOrder extends LitePalSupport {
     private String customer_user,rider_user,sales_user,customer_text,rider_text,sales_text,name,receive_phone,address;
     private int customer_rank,rider_rank,sales_rank;
     private boolean receive,over,punctuality;
-    private long takeorder_time,arrival_time;
+    private String takeorder_time,arrival_time;
     private float total_price;
 
     public String getCustomer_user() {
@@ -129,19 +129,19 @@ public class TakeOrder extends LitePalSupport {
         this.punctuality = punctuality;
     }
 
-    public long getTakeorder_time() {
+    public String getTakeorder_time() {
         return takeorder_time;
     }
 
-    public void setTakeorder_time(long takeorder_time) {
+    public void setTakeorder_time(String takeorder_time) {
         this.takeorder_time = takeorder_time;
     }
 
-    public long getArrival_time() {
+    public String getArrival_time() {
         return arrival_time;
     }
 
-    public void setArrival_time(long arrival_time) {
+    public void setArrival_time(String arrival_time) {
         this.arrival_time = arrival_time;
     }
 

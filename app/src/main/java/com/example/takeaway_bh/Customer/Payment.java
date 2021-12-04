@@ -2,6 +2,7 @@ package com.example.takeaway_bh.Customer;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -10,6 +11,9 @@ import com.example.takeaway_bh.Bean.TakeOrder;
 import com.example.takeaway_bh.MyApp;
 import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityPaymentBinding;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Payment extends BaseActivity {
 
@@ -50,6 +54,11 @@ public class Payment extends BaseActivity {
         order.setOver(false);
         order.setPunctuality(false);
         order.setCustomer_user(MyApp.getUserName());
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");// HH:mm:ss
+//获取当前时间
+        Date date = new Date(System.currentTimeMillis());
+        Log.d("BaseActivity",simpleDateFormat.format(date));
+        order.setTakeorder_time(simpleDateFormat.format(date));
         order.save();
     }
 }

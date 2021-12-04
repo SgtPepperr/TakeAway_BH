@@ -3,12 +3,15 @@
     package="com.example.takeaway_bh">
 
     <application
-        android:name="com.example.takeaway_bh.MyApp"
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TakeAway_BH">
+        <activity
+            android:name=".Customer.OrderInfo"
+            android:exported="true" />
         <activity
             android:name=".Customer.PaymentFinish"
             android:exported="true" />
@@ -27,7 +30,7 @@
             android:name=".Customer.CustomerIndex"
             android:exported="true"
             android:label="用户主界面"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask" />
         <activity
             android:name=".Rider.RiderIndex"
             android:exported="true"
@@ -52,9 +55,10 @@
             android:name=".Customer.AddComment"
             android:exported="true"
             android:label="评论" />
-        <activity android:name=".Customer.ChangeAddress"
+        <activity
+            android:name=".Customer.ChangeAddress"
             android:exported="true"
-            android:label="修改地址"/>
+            android:label="修改地址" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
