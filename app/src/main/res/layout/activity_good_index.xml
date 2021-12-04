@@ -106,7 +106,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/icon_cart"
+        android:src="@drawable/ic_comment"
         app:layout_anchorGravity="bottom|end"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

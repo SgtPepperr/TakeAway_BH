@@ -51,7 +51,7 @@ public class StoreIndex extends BaseActivity {
         binding.storeListView.setAdapter(adapter);
         setContentView(binding.getRoot());
 
-        View view = findViewById(R.id.floatingButton);
+        View view = findViewById(R.id.pay);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

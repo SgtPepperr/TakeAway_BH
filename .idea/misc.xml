@@ -30,6 +30,7 @@
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_change_address.xml" value="0.2390625" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_customer_index.xml" value="0.25364583333333335" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_good_index.xml" value="0.17291666666666666" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_item_categories_parent.xml" value="0.25364583333333335" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/activity_manage_index.xml" value="0.25364583333333335" />
@@ -42,6 +43,7 @@
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/fragment_home.xml" value="0.25364583333333335" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/fragment_index.xml" value="0.264" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/good_item.xml" value="0.264" />
+        <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/order_evaluate.xml" value="0.2" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/order_information.xml" value="0.25364583333333335" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/order_item.xml" value="0.25" />
         <entry key="..\:/learn/android/TakeAway_BH-master/app/src/main/res/layout/order_taking_item.xml" value="0.25364583333333335" />
