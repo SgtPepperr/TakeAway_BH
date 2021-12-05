@@ -8,8 +8,8 @@ public class InitLitePal{
 
     public void init() {
         setUser("123456","123456",false);
-        setStore("store1",R.drawable.apple_pic,"no intro");
-        setStore("store2",R.drawable.banana_pic,"no intro");
+        setStore("学二食堂",R.drawable.apple_pic,"no intro");
+        setStore("学五食堂",R.drawable.banana_pic,"no intro");
         setGood("麻婆豆腐","麻婆豆腐，是四川省传统名菜之一，属于川菜，，此菜成菜麻、辣、鲜、香、烫、翠、嫩、酥，将川菜麻辣味型的特点展现的淋漓尽致",
                 "store1",R.drawable.ma_po_dou_fu,6);
         setGood("西红柿炒鸡蛋","西红柿炒鸡蛋是以西红柿，鸡蛋为主料制作的家常菜。味道咸香可口，特别下饭。",

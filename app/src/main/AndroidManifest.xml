@@ -81,7 +81,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label="登录页面"
+            android:label="航送"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
