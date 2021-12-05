@@ -19,4 +19,5 @@ public class RiderIndex extends BaseActivity {
         Intent in=getIntent();
         username=in.getStringExtra("login.username");
     }
+
 }

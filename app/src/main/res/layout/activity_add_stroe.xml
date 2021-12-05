@@ -4,43 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Manage.AddGoodActivity">
+    tools:context=".Manage.AddStoreActivity">
+
 
     <EditText
-        android:id="@+id/storename"
+        android:id="@+id/tvStoreName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:editable="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
         android:ems="10"
-        android:hint="店铺名称" />
+        android:hint="商店名" />
 
     <EditText
-        android:id="@+id/goodname"
+        android:id="@+id/tvIntroduction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="菜品名称"
-        android:inputType="textPersonName" />
-
-    <EditText
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="菜品价格"
-        android:inputType="number" />
+        android:hint="商店简介" />
 
     <Button
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:text="添加信息" />
-
+        android:text="添加商店" />
 
 </LinearLayout>

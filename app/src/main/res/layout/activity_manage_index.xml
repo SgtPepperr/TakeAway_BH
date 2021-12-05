@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Manage.ManageIndex">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rlvStore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
