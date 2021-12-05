@@ -56,6 +56,8 @@ public class StoreIndex extends BaseActivity {
 
 //        list = LitePal.where("StoreName=?", StoreName).find(Good.class);
 
+
+
         binding = ActivityStoreIndexBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         LinearLayoutManager layoutManager=new LinearLayoutManager(StoreIndex.this);
@@ -68,7 +70,7 @@ public class StoreIndex extends BaseActivity {
         binding.storeListView.addItemDecoration(new DividerItemDecoration(
                 this, DividerItemDecoration.HORIZONTAL));
 
-        binding.storeImage.setImageResource(R.drawable.banana_pic);
+        binding.storeImage.setImageResource(R.drawable.head_2);
 
         binding.pay.setOnClickListener(new View.OnClickListener() {
             @Override

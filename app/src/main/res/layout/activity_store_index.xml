@@ -9,8 +9,9 @@
 
     <ImageView
         android:id="@+id/store_image"
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="150dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"

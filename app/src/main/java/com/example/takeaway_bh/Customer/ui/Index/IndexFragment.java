@@ -39,7 +39,7 @@ public class IndexFragment extends Fragment {
 //        username= activity.username;
 
         List<Store> stores= LitePal.findAll(Store.class);
-        binding.imageView2.setImageResource(R.drawable.banana_pic);
+        binding.imageView2.setImageResource(R.drawable.head_2);
 
 //        for(Store s:stores){
 //            Log.d("LoginActivity","storename is "+s.getStoreName());                      //调试模块部分，对商店图片信息进行初始化
