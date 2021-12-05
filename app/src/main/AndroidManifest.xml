@@ -10,15 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TakeAway_BH">
         <activity
+            android:name=".Rider.RiderOrderInfo"
+            android:exported="true" />
+        <activity
+            android:name=".Rider.RiderOrder"
+            android:exported="true"
+            android:label="我的订单" />
+        <activity
             android:name=".Customer.OrderInfo"
             android:exported="true" />
         <activity
             android:name=".Manage.DeleteGoodActivity"
             android:exported="true"
-            android:label="删除菜品"/>
-        <activity android:name=".Manage.CheckGoodActivity"
+            android:label="删除菜品" />
+        <activity
+            android:name=".Manage.CheckGoodActivity"
             android:exported="true"
-            android:label="查看菜品信息"/>
+            android:label="查看菜品信息" />
         <activity
             android:name=".Manage.ManageIndex"
             android:exported="true"
@@ -30,7 +38,7 @@
         <activity
             android:name=".Manage.AddStoreActivity"
             android:exported="true"
-            android:label="增加商店"/>
+            android:label="增加商店" />
         <activity
             android:name=".Customer.PaymentFinish"
             android:exported="true" />
@@ -49,7 +57,7 @@
         <activity
             android:name=".Rider.RiderIndex"
             android:exported="true"
-            android:label="骑手主界面" />
+            android:label="待选订单页面" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true"

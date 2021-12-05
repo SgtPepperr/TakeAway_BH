@@ -44,6 +44,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (LitePal.findAll(Store.class).size() == 0) {
             InitLitePal init = new InitLitePal();
             init.init();
@@ -108,10 +109,12 @@ public class LoginActivity extends BaseActivity {
                         editor.apply();
                         MyApp.setUserName(account);
                         if (binding.chooseway.isChecked()) {
+                            MyApp.setIsRider(true);
                             Intent intent = new Intent(LoginActivity.this, RiderIndex.class);
                             intent.putExtra("login.username",account);
                             startActivity(intent);
                         }else{
+                            MyApp.setIsRider(false);
                             Intent intent=new Intent(LoginActivity.this, CustomerIndex.class);
                             intent.putExtra("login.username",account);
                             startActivity(intent);

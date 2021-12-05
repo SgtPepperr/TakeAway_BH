@@ -12,6 +12,7 @@ import java.util.List;
 public class MyApp extends Application {
     private static Context context;
     private static String UserName;
+    private static boolean isRider;
 
     @Override
     public void onCreate() {
@@ -34,5 +35,13 @@ public class MyApp extends Application {
 
     public static Context getContext() {
         return context;
+    }
+
+    public static boolean isIsRider() {
+        return isRider;
+    }
+
+    public static void setIsRider(boolean isRider) {
+        MyApp.isRider = isRider;
     }
 }

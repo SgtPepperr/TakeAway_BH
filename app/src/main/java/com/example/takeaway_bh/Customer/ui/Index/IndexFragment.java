@@ -41,12 +41,12 @@ public class IndexFragment extends Fragment {
         List<Store> stores= LitePal.findAll(Store.class);
         binding.imageView2.setImageResource(R.drawable.banana_pic);
 
-        for(Store s:stores){
-            Log.d("LoginActivity","storename is "+s.getStoreName());                      //调试模块部分，对商店图片信息进行初始化
-            s.setImageId(R.drawable.banana_pic);
-            s.save();
+//        for(Store s:stores){
+//            Log.d("LoginActivity","storename is "+s.getStoreName());                      //调试模块部分，对商店图片信息进行初始化
+//            s.setImageId(R.drawable.banana_pic);
 //            s.save();
-        }
+////            s.save();
+//        }
 
         storeList= LitePal.findAll(Store.class);
 

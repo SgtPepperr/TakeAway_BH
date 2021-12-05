@@ -25,9 +25,13 @@ public class OrderInfo extends AppCompatActivity {
         TextView address=findViewById(R.id.info_payment_address);
         TextView phone=findViewById(R.id.info_payment_phone);
         TextView text=findViewById(R.id.info_payment_text);
+        TextView rider=findViewById(R.id.info_rider_name);
+        TextView finish_order_time=findViewById(R.id.info_order_finish_time);
         TextView take_order_time=findViewById(R.id.info_take_order_time);
 
         storename.setText(order.getSales_user());
+        rider.setText(order.getRider_user());
+        finish_order_time.setText(order.getArrival_time());
         money.setText("￥"+order.getTotal_price());
         address.setText(order.getAddress());
         phone.setText(order.getReceive_phone());

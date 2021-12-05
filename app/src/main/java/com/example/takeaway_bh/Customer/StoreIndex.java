@@ -48,11 +48,12 @@ public class StoreIndex extends BaseActivity {
 
         list = LitePal.where("StoreName=?", StoreName).find(Good.class);
 
-        for(Good s : list){                                                //调试+初始化
-//            Log.d("StoreIndex","GoodName is "+s.getName() + " StoreName is " + s.getStoreName());
-            s.setImageId(R.drawable.apple_pic);
-            s.save();
-        }
+//        for(Good s : list){                                                //调试+初始化
+////            Log.d("StoreIndex","GoodName is "+s.getName() + " StoreName is " + s.getStoreName());
+//            s.setImageId(R.drawable.apple_pic);
+//            s.save();
+//        }
+
 //        list = LitePal.where("StoreName=?", StoreName).find(Good.class);
 
         binding = ActivityStoreIndexBinding.inflate(getLayoutInflater());
