@@ -43,6 +43,7 @@ public class RiderOrderInfo extends AppCompatActivity {
             binding.takeOrder.setVisibility(View.VISIBLE);
             binding.takeOrder.setText("完成订单");
         }else{
+            binding.orderInformStatement.setText("订单状态：未接单");
             binding.takeOrder.setVisibility(View.VISIBLE);
             binding.takeOrder.setText("接单");
         }

@@ -31,16 +31,20 @@ public class AddGoodActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String storename = binding.storename.getText().toString();
                 String goodname = binding.goodname.getText().toString();
-                float price = Float.valueOf(binding.price.getText().toString());
+                String price = binding.price.getText().toString();
 
                 List<Good> goods = LitePal.where("StoreName = ? and name = ?", storename, goodname).find(Good.class);
                 if (goods.size() != 0) {
                     Toast.makeText(AddGoodActivity.this, "该商品已存在,请修改信息", Toast.LENGTH_SHORT).show();
+                }else if(goodname.equals("")){
+                    Toast.makeText(AddGoodActivity.this, "请填写菜品信息", Toast.LENGTH_SHORT).show();
+                }else if(price.equals("")){
+                    Toast.makeText(AddGoodActivity.this, "请填写价格信息", Toast.LENGTH_SHORT).show();
                 } else {
                     Good good = new Good();
                     good.setStoreName(storename);
                     good.setName(goodname);
-                    good.setPrice(price);
+                    good.setPrice(Float.valueOf(price));
                     good.setImageId(R.drawable.gan_guo_tu);
                     good.save();
 

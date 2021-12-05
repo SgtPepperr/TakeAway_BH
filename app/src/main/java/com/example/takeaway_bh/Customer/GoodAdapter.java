@@ -44,7 +44,6 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
             goodAdd = itemView.findViewById(R.id.store_add);
             goodCount = itemView.findViewById(R.id.count);
             goodSub = itemView.findViewById(R.id.store_minus);
-
         }
 
     }

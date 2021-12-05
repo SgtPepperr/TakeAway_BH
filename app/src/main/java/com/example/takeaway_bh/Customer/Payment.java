@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.takeaway_bh.BaseActivity;
 import com.example.takeaway_bh.Bean.TakeOrder;
@@ -36,29 +37,33 @@ public class Payment extends BaseActivity {
             @Override
             public void onClick(View view) {
                 addOrder();
-                Intent intent = new Intent(Payment.this, PaymentFinish.class);
-                startActivity(intent);
             }
         });
     }
 
     void addOrder(){
         TakeOrder order=new TakeOrder();
-        order.setAddress(binding.paymentAddress.getText().toString());
-        order.setCustomer_text(binding.paymentText.getText().toString());
-        order.setTotal_price(Float.parseFloat(money.substring(1)));
-        order.setReceive_phone(binding.paymentPhone.getText().toString());
-        order.setName(MyApp.getUserName()+"用户  NO."+MyApp.getId()+"订单");
-        order.setSales_user(StoreName);
-        order.setReceive(false);
-        order.setOver(false);
-        order.setPunctuality(false);
-        order.setCustomer_user(MyApp.getUserName());
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");// HH:mm:ss
+        if(binding.paymentAddress.getText().toString().equals("")||binding.paymentPhone.getText().toString().equals("")){
+            Toast.makeText(Payment.this,"请完整填写地址和电话信息",Toast.LENGTH_SHORT).show();
+        }else {
+            order.setAddress(binding.paymentAddress.getText().toString());
+            order.setCustomer_text(binding.paymentText.getText().toString());
+            order.setTotal_price(Float.parseFloat(money.substring(1)));
+            order.setReceive_phone(binding.paymentPhone.getText().toString());
+            order.setName(MyApp.getUserName() + "用户  NO." + MyApp.getId() + "订单");
+            order.setSales_user(StoreName);
+            order.setReceive(false);
+            order.setOver(false);
+            order.setPunctuality(false);
+            order.setCustomer_user(MyApp.getUserName());
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");// HH:mm:ss
 //获取当前时间
-        Date date = new Date(System.currentTimeMillis());
+            Date date = new Date(System.currentTimeMillis());
 //        Log.d("BaseActivity",simpleDateFormat.format(date));
-        order.setTakeorder_time(simpleDateFormat.format(date));
-        order.save();
+            order.setTakeorder_time(simpleDateFormat.format(date));
+            order.save();
+            Intent intent = new Intent(Payment.this, PaymentFinish.class);
+            startActivity(intent);
+        }
     }
 }

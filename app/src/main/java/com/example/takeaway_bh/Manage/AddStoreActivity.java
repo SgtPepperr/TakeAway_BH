@@ -48,7 +48,9 @@ public class AddStoreActivity extends AppCompatActivity {
         String storeIntroduction = binding.tvIntroduction.getText().toString();
 
         List<Store> stores = LitePal.where("StoreName = ?", storeName).find(Store.class);
-        if (stores.size() == 0) {
+        if(storeName.equals("")){
+            Toast.makeText(AddStoreActivity.this, "请填写店铺名称", Toast.LENGTH_SHORT).show();
+        } else if (stores.size() == 0) {
             Store store = new Store();
             store.setStoreName(storeName);
             store.setIntroduction(storeIntroduction);
@@ -57,7 +59,6 @@ public class AddStoreActivity extends AppCompatActivity {
             finish();
 //            Toast.makeText(AddStoreActivity.this, "该商店已添加", Toast.LENGTH_SHORT).show();
         } else {
-
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
