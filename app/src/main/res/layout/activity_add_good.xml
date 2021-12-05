@@ -33,7 +33,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="菜品价格"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/add"
@@ -41,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="添加信息" />
+
 
 
 </LinearLayout>

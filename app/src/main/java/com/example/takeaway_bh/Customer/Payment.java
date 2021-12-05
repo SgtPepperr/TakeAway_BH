@@ -48,7 +48,7 @@ public class Payment extends BaseActivity {
         order.setCustomer_text(binding.paymentText.getText().toString());
         order.setTotal_price(Float.parseFloat(money.substring(1)));
         order.setReceive_phone(binding.paymentPhone.getText().toString());
-        order.setName(String.valueOf(MyApp.getId()));
+        order.setName(MyApp.getUserName()+"用户  NO."+MyApp.getId()+"订单");
         order.setSales_user(StoreName);
         order.setReceive(false);
         order.setOver(false);
