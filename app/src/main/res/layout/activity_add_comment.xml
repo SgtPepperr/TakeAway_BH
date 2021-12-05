@@ -2,61 +2,105 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <View
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"
-        android:layout_marginTop="@dimen/spacing_minor" />
+        android:layout_height="350dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"
-        android:layout_marginTop="@dimen/spacing_major" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/cell_normal"
-        android:background="@color/white"
-        android:hint="请输入您的评分（满分10分）"
-        android:paddingLeft="@dimen/spacing_major"
-        android:paddingRight="@dimen/spacing_major"
-        android:textColor="@color/black"
-        android:textSize="@dimen/font_normal" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"
-        android:layout_marginTop="@dimen/spacing_major" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/white">
-
-        <EditText
-            android:id="@+id/edit_content"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"
-            android:hint="请输入您的评价"
-            android:gravity="left"
-            android:maxLength="200"
-            android:padding="@dimen/spacing_major"
-            android:textSize="@dimen/font_normal" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </FrameLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size"
+                android:layout_marginTop="@dimen/spacing_minor" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/divider_size"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size"
+                android:layout_marginTop="@dimen/spacing_major" />
 
-    <Button
-        android:id="@+id/add_comment_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="提交"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_normal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_normal"
+                    android:background="@color/white"
+                    android:hint="请输入您的评分（满分10分）"
+                    android:paddingLeft="@dimen/spacing_major"
+                    android:paddingRight="@dimen/spacing_major"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_normal" />
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_size"
+                android:layout_marginTop="@dimen/spacing_major" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <EditText
+                        android:id="@+id/edit_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="请输入您的评价"
+                        android:gravity="left"
+                        android:maxLength="200"
+                        android:padding="@dimen/spacing_major"
+                        android:textSize="@dimen/font_normal" />
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <Button
+                    android:id="@+id/add_comment_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="提交"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
