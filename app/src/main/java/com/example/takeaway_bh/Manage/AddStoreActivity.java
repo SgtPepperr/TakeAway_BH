@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.takeaway_bh.Bean.Store;
+import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityAddStroeBinding;
 
 import org.litepal.LitePal;
@@ -51,8 +52,10 @@ public class AddStoreActivity extends AppCompatActivity {
             Store store = new Store();
             store.setStoreName(storeName);
             store.setIntroduction(storeIntroduction);
+            store.setImageId(R.drawable.cherry_pic);
             store.save();
-            Toast.makeText(AddStoreActivity.this, "该商店已添加", Toast.LENGTH_SHORT).show();
+            finish();
+//            Toast.makeText(AddStoreActivity.this, "该商店已添加", Toast.LENGTH_SHORT).show();
         } else {
 
             runOnUiThread(new Runnable() {

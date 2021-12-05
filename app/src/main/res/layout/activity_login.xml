@@ -64,7 +64,8 @@
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/forget"
-            android:text="忘记密码？"
+            android:text="重置商品!"
+            android:clickable="true"
             android:layout_weight="1"
             android:textColor="@color/colorPrimary"
             android:gravity="right"

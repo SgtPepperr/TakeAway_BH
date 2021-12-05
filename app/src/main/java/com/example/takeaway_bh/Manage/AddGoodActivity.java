@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.takeaway_bh.Bean.Good;
+import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityAddGoodBinding;
 
 import org.litepal.LitePal;
@@ -40,6 +41,7 @@ public class AddGoodActivity extends AppCompatActivity {
                     good.setStoreName(storename);
                     good.setName(goodname);
                     good.setPrice(price);
+                    good.setImageId(R.drawable.gan_guo_tu);
                     good.save();
 
                     finish();

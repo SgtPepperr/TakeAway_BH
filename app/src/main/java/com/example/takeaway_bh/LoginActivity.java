@@ -141,5 +141,20 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
+        binding.forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<Store> stores=LitePal.findAll(Store.class);
+                List<Good> goods=LitePal.findAll(Good.class);
+                for(Store s:stores){
+                    s.delete();
+                }
+                for(Good g:goods){
+                    g.delete();
+                }
+                new InitLitePal().init();
+            }
+        });
+
     }
 }
