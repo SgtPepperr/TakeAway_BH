@@ -8,7 +8,7 @@ public class InitLitePal {
 
     public void init() {
         setUser("123456", "123456", false);
-        setStore("学二食堂", R.drawable.apple_pic, "地处北航黄金地段，位于培训中心西侧建筑物的一楼，然后楼上的教工食堂最物美价廉的（狗头");
+        setStore("学二食堂", R.drawable.apple_pic, "地处北航黄金地段，位于培训中心西侧建筑物的一楼，然而楼上的教工食堂才是最物美价廉的（狗头");
         setStore("学五食堂", R.drawable.banana_pic, "这是一个不错的食堂");
         setGood("麻婆豆腐", "麻婆豆腐，是四川省传统名菜之一，属于川菜，，此菜成菜麻、辣、鲜、香、烫、翠、嫩、酥，将川菜麻辣味型的特点展现的淋漓尽致",
                 "学二食堂", R.drawable.ma_po_dou_fu, 6);
