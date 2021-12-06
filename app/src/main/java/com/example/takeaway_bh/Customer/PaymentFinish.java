@@ -1,7 +1,5 @@
 package com.example.takeaway_bh.Customer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +18,7 @@ public class PaymentFinish extends BaseActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(PaymentFinish.this,CustomerIndex.class);
+                Intent intent = new Intent(PaymentFinish.this, CustomerIndex.class);
                 startActivity(intent);
             }
         });

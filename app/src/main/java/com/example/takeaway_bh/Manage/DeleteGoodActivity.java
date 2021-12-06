@@ -35,7 +35,7 @@ public class DeleteGoodActivity extends AppCompatActivity {
                 if (goods.size() == 0) {
                     Toast.makeText(DeleteGoodActivity.this, "该商品不存在,请修改信息", Toast.LENGTH_SHORT).show();
                 } else {
-                    LitePal.deleteAll(Good.class,"StoreName = ? and name = ?", storename, goodname);
+                    LitePal.deleteAll(Good.class, "StoreName = ? and name = ?", storename, goodname);
                     finish();
                 }
             }

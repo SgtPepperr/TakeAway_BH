@@ -1,16 +1,14 @@
 package com.example.takeaway_bh.Customer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.takeaway_bh.Bean.Address;
-import com.example.takeaway_bh.Customer.ui.home.HomeFragment;
 import com.example.takeaway_bh.MyApp;
-import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityChangeAddressBinding;
 
 import org.litepal.LitePal;
@@ -36,11 +34,11 @@ public class ChangeAddress extends AppCompatActivity {
 
                 String NewAddress = binding.newParent.getText().toString();
                 if (NewAddress.equals("")) {
-                    Toast.makeText(ChangeAddress.this,"请输入新地址",Toast.LENGTH_LONG).show();
+                    Toast.makeText(ChangeAddress.this, "请输入新地址", Toast.LENGTH_LONG).show();
                 } else {
-                    if(address!=null)
+                    if (address != null)
                         address.delete();
-                    Address add=new Address();
+                    Address add = new Address();
                     add.setAddress(NewAddress);
                     add.setUserName(MyApp.getUserName());
                     add.save();

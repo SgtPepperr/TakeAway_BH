@@ -3,31 +3,30 @@ package com.example.takeaway_bh.Customer;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.takeaway_bh.BaseActivity;
-import com.example.takeaway_bh.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.takeaway_bh.BaseActivity;
+import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityCustomerIndexBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class CustomerIndex extends BaseActivity {
 
-    private ActivityCustomerIndexBinding binding;
     public String username;
+    private ActivityCustomerIndexBinding binding;
     private Fragment myFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent in=getIntent();
-        username=in.getStringExtra("login.username");
-        myFragment=getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_customer_index);
+        Intent in = getIntent();
+        username = in.getStringExtra("login.username");
+        myFragment = getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_activity_customer_index);
 
 
         binding = ActivityCustomerIndexBinding.inflate(getLayoutInflater());

@@ -7,19 +7,10 @@ import com.example.takeaway_bh.Bean.TakeOrder;
 
 import org.litepal.LitePal;
 
-import java.util.List;
-
 public class MyApp extends Application {
     private static Context context;
     private static String UserName;
     private static boolean isRider;
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        context=getApplicationContext();
-        LitePal.initialize(context);
-    }
 
     public static String getUserName() {
         return UserName;
@@ -30,7 +21,7 @@ public class MyApp extends Application {
     }
 
     public static int getId() {
-        return LitePal.where("customer_user is ?",UserName).find(TakeOrder.class).size()+1;
+        return LitePal.where("customer_user is ?", UserName).find(TakeOrder.class).size() + 1;
     }
 
     public static Context getContext() {
@@ -43,5 +34,12 @@ public class MyApp extends Application {
 
     public static void setIsRider(boolean isRider) {
         MyApp.isRider = isRider;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        context = getApplicationContext();
+        LitePal.initialize(context);
     }
 }

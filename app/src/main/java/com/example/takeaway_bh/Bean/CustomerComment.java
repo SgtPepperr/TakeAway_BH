@@ -3,8 +3,8 @@ package com.example.takeaway_bh.Bean;
 import org.litepal.crud.LitePalSupport;
 
 public class CustomerComment extends LitePalSupport {
-    private String head,username,rank_text;
-    private  int rank;
+    private String head, username, rank_text;
+    private int rank;
     private long time;
 
     public String getHead() {

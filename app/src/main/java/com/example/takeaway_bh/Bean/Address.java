@@ -1,9 +1,10 @@
 package com.example.takeaway_bh.Bean;
 
 import org.litepal.crud.LitePalSupport;
+
 //顾客收获地址
 public class Address extends LitePalSupport {
-    String phone,address,receive_phone,name,userName;
+    String phone, address, receive_phone, name, userName;
     boolean selected;
 
     public String getUserName() {

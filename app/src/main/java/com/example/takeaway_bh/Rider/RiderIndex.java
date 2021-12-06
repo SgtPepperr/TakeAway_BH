@@ -1,13 +1,12 @@
 package com.example.takeaway_bh.Rider;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.takeaway_bh.BaseActivity;
 import com.example.takeaway_bh.Bean.TakeOrder;
@@ -22,38 +21,38 @@ import java.util.List;
 
 public class RiderIndex extends BaseActivity {
     private ActivityRiderIndexBinding binding;
-    private List<TakeOrder> orderList=new ArrayList<>();
+    private List<TakeOrder> orderList = new ArrayList<>();
     private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityRiderIndexBinding.inflate(getLayoutInflater());
+        binding = ActivityRiderIndexBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        Intent in=getIntent();
-        username=in.getStringExtra("login.username");
+        Intent in = getIntent();
+        username = in.getStringExtra("login.username");
 
-        orderList= LitePal.where("receive is ?","0").find(TakeOrder.class);
+        orderList = LitePal.where("receive is ?", "0").find(TakeOrder.class);
 //        for(TakeOrder order:orderList){
 //            order.delete();
 //        }
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.recyclerRiderIndex.setLayoutManager(layoutManager);
-        OrderAdapter adapter=new OrderAdapter(orderList);
+        OrderAdapter adapter = new OrderAdapter(orderList);
         binding.recyclerRiderIndex.setAdapter(adapter);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.rider_menu,menu);
+        getMenuInflater().inflate(R.menu.rider_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.my_order:
-                Intent intent=new Intent(RiderIndex.this,RiderOrder.class);
+                Intent intent = new Intent(RiderIndex.this, RiderOrder.class);
                 startActivity(intent);
                 break;
             case R.id.my_info:

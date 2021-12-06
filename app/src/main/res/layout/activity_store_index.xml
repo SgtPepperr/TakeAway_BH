@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Customer.StoreIndex">
 
     <ImageView
         android:id="@+id/store_image"
-        android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="150dp"/>
+        android:layout_height="150dp"
+        android:scaleType="fitXY" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,65 +18,65 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/store_typeView"
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:paddingTop="100dp"
-        android:listSelector="@drawable/select_selector"
-        android:scrollbars="none"
-        android:background="@color/lightGray"
-        android:divider="@null"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/store_typeView"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightGray"
+            android:divider="@null"
+            android:listSelector="@drawable/select_selector"
+            android:paddingTop="100dp"
+            android:scrollbars="none" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/store_ListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:background="@color/white"
-        android:divider="@null" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/store_ListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/icon_cart"
-        app:layout_anchorGravity="bottom|end"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />-->
+        <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/icon_cart"
+                app:layout_anchorGravity="bottom|end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />-->
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:weightSum="10"
-        android:orientation="horizontal"
+        android:layout_height="50dp"
         android:background="@color/darkGray"
         android:gravity="center"
-        android:layout_height="50dp">
+        android:orientation="horizontal"
+        android:weightSum="10">
 
         <RelativeLayout
             android:layout_width="60dp"
-            android:layout_marginLeft="50dp"
-            android:layout_height="50dp">
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp">
 
             <ImageView
                 android:id="@+id/car"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
                 android:background="@drawable/car" />
 
             <TextView
                 android:id="@+id/countnum"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:background="@drawable/circle"
                 android:gravity="center"
                 android:text="0"
@@ -86,37 +85,38 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_weight="6"
             android:layout_width="0dp"
-            android:orientation="vertical"
+            android:layout_height="50dp"
             android:layout_marginLeft="20sp"
-            android:layout_height="50dp">
-            <TextView
-                android:id="@+id/total_money"
-                android:text="￥0.0"
-                android:textColor="@color/red"
-                android:layout_marginTop="5dp"
-                android:textSize="18sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            android:layout_weight="6"
+            android:orientation="vertical">
 
             <TextView
-                android:text="另需配送费5.0元"
-                android:textSize="12sp"
+                android:id="@+id/total_money"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="￥0.0"
+                android:textColor="@color/red"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="另需配送费5.0元"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <Button
             android:id="@+id/pay"
-            android:layout_weight="4"
-            android:text="结算"
-            android:textSize="20sp"
-            android:textColor="@color/white"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
             android:background="@color/blue"
-            android:layout_height="match_parent" />
+            android:text="结算"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

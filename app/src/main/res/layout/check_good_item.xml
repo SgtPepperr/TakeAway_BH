@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="90dp"
     android:layout_marginTop="10dp"
@@ -35,9 +34,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingRight="2dp"
                 android:paddingLeft="5dp"
-                android:paddingTop="5dp">
+                android:paddingTop="5dp"
+                android:paddingRight="2dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -49,8 +48,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:gravity="center"
                         android:ellipsize="end"
+                        android:gravity="center"
                         android:textColor="#464646"
                         android:textSize="20sp" />
 
@@ -58,15 +57,15 @@
                         android:id="@+id/good_price"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center"
-                        android:textColor="@color/red"
-                        android:layout_weight="1"/>
+                        android:textColor="@color/red" />
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="5dp"/>
+                    android:layout_height="5dp" />
 
 
                 <TextView

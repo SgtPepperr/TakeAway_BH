@@ -2,15 +2,12 @@ package com.example.takeaway_bh.Customer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.takeaway_bh.BaseActivity;
 import com.example.takeaway_bh.Bean.TakeOrder;
 import com.example.takeaway_bh.MyApp;
-import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityPaymentBinding;
 
 import java.text.SimpleDateFormat;
@@ -21,15 +18,16 @@ public class Payment extends BaseActivity {
     private ActivityPaymentBinding binding;
     private String StoreName;
     private String money;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityPaymentBinding.inflate(getLayoutInflater());
+        binding = ActivityPaymentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Intent intent=getIntent();
-        StoreName=intent.getStringExtra("StoreName");
-        money=intent.getStringExtra("allmoney");
+        Intent intent = getIntent();
+        StoreName = intent.getStringExtra("StoreName");
+        money = intent.getStringExtra("allmoney");
 
         binding.tvCost.setText(money);
         binding.businessNameAndId.setText(StoreName);
@@ -41,11 +39,11 @@ public class Payment extends BaseActivity {
         });
     }
 
-    void addOrder(){
-        TakeOrder order=new TakeOrder();
-        if(binding.paymentAddress.getText().toString().equals("")||binding.paymentPhone.getText().toString().equals("")){
-            Toast.makeText(Payment.this,"请完整填写地址和电话信息",Toast.LENGTH_SHORT).show();
-        }else {
+    void addOrder() {
+        TakeOrder order = new TakeOrder();
+        if (binding.paymentAddress.getText().toString().equals("") || binding.paymentPhone.getText().toString().equals("")) {
+            Toast.makeText(Payment.this, "请完整填写地址和电话信息", Toast.LENGTH_SHORT).show();
+        } else {
             order.setAddress(binding.paymentAddress.getText().toString());
             order.setCustomer_text(binding.paymentText.getText().toString());
             order.setTotal_price(Float.parseFloat(money.substring(1)));

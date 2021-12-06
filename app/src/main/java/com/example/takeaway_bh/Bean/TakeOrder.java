@@ -3,10 +3,10 @@ package com.example.takeaway_bh.Bean;
 import org.litepal.crud.LitePalSupport;
 
 public class TakeOrder extends LitePalSupport {
-    private String customer_user,rider_user,sales_user,customer_text,rider_text,sales_text,name,receive_phone,address;
-    private int customer_rank,rider_rank,sales_rank;
-    private boolean receive,over,punctuality;
-    private String takeorder_time,arrival_time;
+    private String customer_user, rider_user, sales_user, customer_text, rider_text, sales_text, name, receive_phone, address;
+    private int customer_rank, rider_rank, sales_rank;
+    private boolean receive, over, punctuality;
+    private String takeorder_time, arrival_time;
     private float total_price;
 
     public String getCustomer_user() {

@@ -1,16 +1,13 @@
 package com.example.takeaway_bh.Rider;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.takeaway_bh.Bean.TakeOrder;
 import com.example.takeaway_bh.MyApp;
-import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.ActivityRiderOrderInfoBinding;
 
 import org.litepal.LitePal;
@@ -24,25 +21,25 @@ public class RiderOrderInfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding=ActivityRiderOrderInfoBinding.inflate(getLayoutInflater());
+        binding = ActivityRiderOrderInfoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        String id=getIntent().getStringExtra("OrderId");
-        TakeOrder order= LitePal.where("name is ?",id).find(TakeOrder.class).get(0);
+        String id = getIntent().getStringExtra("OrderId");
+        TakeOrder order = LitePal.where("name is ?", id).find(TakeOrder.class).get(0);
 
         binding.businessNameAndId.setText(order.getSales_user());
-        binding.tvCost.setText("￥"+order.getTotal_price());
+        binding.tvCost.setText("￥" + order.getTotal_price());
         binding.paymentAddress.setText(order.getAddress());
         binding.paymentPhone.setText(order.getReceive_phone());
         binding.paymentText.setText(order.getCustomer_text());
-        if(order.isOver()){
+        if (order.isOver()) {
             binding.orderInformStatement.setText("订单状态：已完成");
             binding.takeOrder.setVisibility(View.GONE);
-        }else if(order.isReceive()){
+        } else if (order.isReceive()) {
             binding.orderInformStatement.setText("订单状态：已接单");
             binding.takeOrder.setVisibility(View.VISIBLE);
             binding.takeOrder.setText("完成订单");
-        }else{
+        } else {
             binding.orderInformStatement.setText("订单状态：未接单");
             binding.takeOrder.setVisibility(View.VISIBLE);
             binding.takeOrder.setText("接单");
@@ -51,11 +48,11 @@ public class RiderOrderInfo extends AppCompatActivity {
         binding.takeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!order.isReceive()) {
+                if (!order.isReceive()) {
                     order.setRider_user(MyApp.getUserName());
                     order.setReceive(true);
                     order.save();
-                }else{
+                } else {
                     order.setOver(true);
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");// HH:mm:ss
 //获取当前时间
@@ -64,7 +61,7 @@ public class RiderOrderInfo extends AppCompatActivity {
                     order.setArrival_time(simpleDateFormat.format(date));
                     order.save();
                 }
-                Intent intent=new Intent(RiderOrderInfo.this,RiderIndex.class);
+                Intent intent = new Intent(RiderOrderInfo.this, RiderIndex.class);
                 startActivity(intent);
                 finish();
             }

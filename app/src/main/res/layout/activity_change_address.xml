@@ -9,8 +9,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="260dp"
-        app:cardCornerRadius="10dp"
         android:layout_marginTop="60dp"
+        app:cardCornerRadius="10dp"
         app:cardElevation="10dp">
 
         <LinearLayout
@@ -25,23 +25,23 @@
                 android:layout_marginLeft="20dp"
                 android:text="原地址:"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
+                android:layout_height="10dp" />
 
             <TextView
                 android:id="@+id/old_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:textSize="16sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"/>
+                android:layout_height="30dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -49,11 +49,11 @@
                 android:layout_marginLeft="20dp"
                 android:text="新地址:"
                 android:textColor="@color/black"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="10dp"/>
+                android:layout_height="10dp" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -70,13 +70,13 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:hint="请输入新地址"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
 
             <View
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"/>
+                android:layout_height="20dp" />
 
             <Button
                 android:id="@+id/change_address_button"
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
-                android:text="添加"/>
+                android:text="添加" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

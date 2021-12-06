@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,10 +9,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -56,10 +55,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <TextView
@@ -67,25 +66,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="订单状态"
-        android:textColor="@color/blue"/>
+        android:textColor="@color/blue" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -98,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="地址:"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/payment_address"
@@ -106,16 +105,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -128,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="联系电话:"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/payment_phone"
@@ -136,16 +135,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -158,30 +157,30 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="备注"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/payment_text"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_weight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <Button
         android:id="@+id/take_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="接单"/>
+        android:text="接单" />
 
 
 </LinearLayout>

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,21 +18,6 @@ import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
     private List<TakeOrder> mOrderList;
-
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        View Orderview;
-        TextView OrderName;
-        TextView OrderTime;
-        TextView OrderState;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            Orderview = itemView;
-            OrderName = itemView.findViewById(R.id.order_name);
-            OrderTime = itemView.findViewById(R.id.order_time);
-            OrderState = itemView.findViewById(R.id.order_statement);
-        }
-    }
 
     public OrderAdapter(List<TakeOrder> mOrderList) {
         this.mOrderList = mOrderList;
@@ -79,5 +63,20 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     @Override
     public int getItemCount() {
         return mOrderList.size();
+    }
+
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        View Orderview;
+        TextView OrderName;
+        TextView OrderTime;
+        TextView OrderState;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            Orderview = itemView;
+            OrderName = itemView.findViewById(R.id.order_name);
+            OrderTime = itemView.findViewById(R.id.order_time);
+            OrderState = itemView.findViewById(R.id.order_statement);
+        }
     }
 }

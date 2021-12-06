@@ -21,23 +21,6 @@ public class StoreAdapterForManager extends RecyclerView.Adapter<StoreAdapterFor
     private List<Store> mStoreList;
     private Context context;
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        View storeview;
-        ImageView storeImage;
-        TextView storeName, storeDesc, tvAdd,tvDelete,tvCheck;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            storeview = itemView;
-            storeImage = itemView.findViewById(R.id.store_image);
-            storeName = itemView.findViewById(R.id.store_name);
-            storeDesc = itemView.findViewById(R.id.tvDesc);
-            tvAdd = itemView.findViewById(R.id.tvAdd);
-            tvDelete = itemView.findViewById(R.id.tvDelete);
-            tvCheck = itemView.findViewById(R.id.tvCheck);
-        }
-    }
-
     public StoreAdapterForManager(List<Store> mStoreList, Context context) {
         this.mStoreList = mStoreList;
         this.context = context;
@@ -87,6 +70,23 @@ public class StoreAdapterForManager extends RecyclerView.Adapter<StoreAdapterFor
     @Override
     public int getItemCount() {
         return mStoreList.size();
+    }
+
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        View storeview;
+        ImageView storeImage;
+        TextView storeName, storeDesc, tvAdd, tvDelete, tvCheck;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            storeview = itemView;
+            storeImage = itemView.findViewById(R.id.store_image);
+            storeName = itemView.findViewById(R.id.store_name);
+            storeDesc = itemView.findViewById(R.id.tvDesc);
+            tvAdd = itemView.findViewById(R.id.tvAdd);
+            tvDelete = itemView.findViewById(R.id.tvDelete);
+            tvCheck = itemView.findViewById(R.id.tvCheck);
+        }
     }
 
 }

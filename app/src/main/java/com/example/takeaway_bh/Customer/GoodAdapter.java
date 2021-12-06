@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.takeaway_bh.Bean.Good;
-import com.example.takeaway_bh.MyApp;
 import com.example.takeaway_bh.R;
 
 import java.util.HashMap;
@@ -26,28 +25,6 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
     private int countnums = 0;
     private float price = 0;
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        View goodView;
-        ImageView goodImage;
-        TextView goodName;
-        TextView goodPrice;
-        TextView goodAdd;
-        TextView goodCount;
-        TextView goodSub;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            goodView = itemView;
-            goodImage = itemView.findViewById(R.id.good_image);
-            goodName = itemView.findViewById(R.id.good_name);
-            goodPrice = itemView.findViewById(R.id.good_price);
-            goodAdd = itemView.findViewById(R.id.store_add);
-            goodCount = itemView.findViewById(R.id.count);
-            goodSub = itemView.findViewById(R.id.store_minus);
-        }
-
-    }
-
     public GoodAdapter(List<Good> mGoodList, TextView m_count, TextView m_price) {
         this.mGoodList = mGoodList;
 //        Log.d("GoodAdapter","wuwu");
@@ -55,6 +32,10 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
 //        Log.d("GoodAdapter",m_count.toString());
         this.m_count = m_count;
         this.m_price = m_price;
+    }
+
+    public static List<Good> getmGoodList() {
+        return mGoodList;
     }
 
     @NonNull
@@ -97,7 +78,7 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
                     cou = map.get(good.getName());
                 }
                 map.put(good.getName(), cou + 1);
-                View v=holder.goodView;
+                View v = holder.goodView;
                 TextView goodCount = v.findViewById(R.id.count);
                 View goodSub = v.findViewById(R.id.store_minus);
                 goodCount.setVisibility(View.VISIBLE);
@@ -115,10 +96,10 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
             public void onClick(View view) {
                 int pos = holder.getLayoutPosition();
                 Good good = mGoodList.get(pos);
-                int  cou = map.get(good.getName());
+                int cou = map.get(good.getName());
 
-                map.put(good.getName(), cou -1);
-                View v=holder.goodView;
+                map.put(good.getName(), cou - 1);
+                View v = holder.goodView;
                 TextView goodCount = v.findViewById(R.id.count);
                 View goodSub = v.findViewById(R.id.store_minus);
 
@@ -128,7 +109,7 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
                 m_count.setText(String.valueOf(countnums));
                 m_price.setText("￥" + price);
 
-                if(cou==1){
+                if (cou == 1) {
                     goodCount.setVisibility(View.GONE);
                     goodSub.setVisibility(View.GONE);
                 }
@@ -142,7 +123,25 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.ViewHolder> {
         return mGoodList.size();
     }
 
-    public static List<Good> getmGoodList() {
-        return mGoodList;
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        View goodView;
+        ImageView goodImage;
+        TextView goodName;
+        TextView goodPrice;
+        TextView goodAdd;
+        TextView goodCount;
+        TextView goodSub;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            goodView = itemView;
+            goodImage = itemView.findViewById(R.id.good_image);
+            goodName = itemView.findViewById(R.id.good_name);
+            goodPrice = itemView.findViewById(R.id.good_price);
+            goodAdd = itemView.findViewById(R.id.store_add);
+            goodCount = itemView.findViewById(R.id.count);
+            goodSub = itemView.findViewById(R.id.store_minus);
+        }
+
     }
 }

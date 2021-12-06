@@ -29,13 +29,13 @@ public class ManageIndex extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_index);
 
-        binding= ActivityManageIndexBinding.inflate(getLayoutInflater());
+        binding = ActivityManageIndexBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(ManageIndex.this, AddStoreActivity.class);
+                Intent intent = new Intent(ManageIndex.this, AddStoreActivity.class);
                 startActivity(intent);
             }
         });
@@ -44,19 +44,18 @@ public class ManageIndex extends BaseActivity {
     }
 
 
-
-    private void getAlStore(){
-        List<Store> stores= LitePal.findAll(Store.class);
+    private void getAlStore() {
+        List<Store> stores = LitePal.findAll(Store.class);
         storeList.clear();
         storeList.addAll(stores);
-        if(storeList.size()!=0){
+        if (storeList.size() != 0) {
             runOnUiThread(new Runnable() {
                 @SuppressLint("NotifyDataSetChanged")
                 @Override
                 public void run() {
-                    if (null == adapter){
+                    if (null == adapter) {
                         initList(storeList);
-                    }else{
+                    } else {
                         adapter.notifyDataSetChanged();
                     }
 
@@ -66,11 +65,11 @@ public class ManageIndex extends BaseActivity {
         }
     }
 
-    private void initList(List<Store> storeList){
+    private void initList(List<Store> storeList) {
         LinearLayoutManager manager = new LinearLayoutManager(this);
         binding.rlvStore.setLayoutManager(manager);
 
-        adapter = new StoreAdapterForManager(storeList,this);
+        adapter = new StoreAdapterForManager(storeList, this);
         binding.rlvStore.setAdapter(adapter);
 
     }

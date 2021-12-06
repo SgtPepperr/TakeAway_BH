@@ -36,9 +36,9 @@ public class AddGoodActivity extends AppCompatActivity {
                 List<Good> goods = LitePal.where("StoreName = ? and name = ?", storename, goodname).find(Good.class);
                 if (goods.size() != 0) {
                     Toast.makeText(AddGoodActivity.this, "该商品已存在,请修改信息", Toast.LENGTH_SHORT).show();
-                }else if(goodname.equals("")){
+                } else if (goodname.equals("")) {
                     Toast.makeText(AddGoodActivity.this, "请填写菜品信息", Toast.LENGTH_SHORT).show();
-                }else if(price.equals("")){
+                } else if (price.equals("")) {
                     Toast.makeText(AddGoodActivity.this, "请填写价格信息", Toast.LENGTH_SHORT).show();
                 } else {
                     Good good = new Good();

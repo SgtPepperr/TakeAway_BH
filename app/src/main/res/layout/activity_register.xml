@@ -8,80 +8,80 @@
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_head"
-        android:layout_marginTop="99dp"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:src="@drawable/icon"
+        android:layout_marginTop="99dp"
         android:scaleType="centerCrop"
-        app:civ_border_width="2dp"
-        app:civ_border_color="#FF000000"/>
+        android:src="@drawable/icon"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:background="@drawable/phone_edit_text"
+        android:hint="手机号"
         android:inputType="number"
         android:maxLength="11"
         android:maxLines="1"
-        android:background="@drawable/phone_edit_text"
-        android:hint="手机号"
-        android:paddingLeft="40dp"/>
+        android:paddingLeft="40dp" />
 
     <EditText
         android:id="@+id/password"
-        android:inputType="textPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/password_edit_text"
+        android:hint="密码"
+        android:inputType="textPassword"
         android:maxLength="20"
         android:maxLines="1"
-        android:hint="密码"
-        android:textCursorDrawable="@null"
-        android:background="@drawable/password_edit_text"
-        android:paddingLeft="40dp"/>
+        android:paddingLeft="40dp"
+        android:textCursorDrawable="@null" />
 
     <EditText
         android:id="@+id/password2"
-        android:inputType="textPassword"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:background="@drawable/password_edit_text"
+        android:hint="确认密码"
+        android:inputType="textPassword"
         android:maxLength="20"
         android:maxLines="1"
-        android:hint="确认密码"
-        android:textCursorDrawable="@null"
-        android:background="@drawable/password_edit_text"
-        android:paddingLeft="40dp"/>
+        android:paddingLeft="40dp"
+        android:textCursorDrawable="@null" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:gravity="center">
 
         <CheckBox
             android:id="@+id/chooseway"
-            android:text="骑手身份"
-            android:textColor="@color/colorPrimary"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="骑手身份"
+            android:textColor="@color/colorPrimary" />
+
         <Button
             android:id="@+id/register"
-            android:text="注册"
-            android:textSize="18sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
             android:background="@drawable/button_blue"
             android:gravity="center"
-            android:layout_weight="1"
-            android:layout_marginLeft="40dp"
+            android:text="注册"
             android:textColor="@color/white"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content" />
+            android:textSize="18sp" />
     </LinearLayout>
 
 </LinearLayout>

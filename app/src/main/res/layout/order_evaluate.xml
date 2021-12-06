@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,7 +13,7 @@
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="10dp"/>
+            android:layout_height="10dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -22,11 +21,11 @@
             android:layout_marginLeft="20dp"
             android:text="请为本次订单评分:"
             android:textColor="@color/black"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="10dp"/>
+            android:layout_height="10dp" />
 
 
         <EditText
@@ -36,12 +35,12 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="评分（满分10分）"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="20dp"/>
+            android:layout_height="20dp" />
 
         <Button
             android:id="@+id/change_address_button"
@@ -49,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:text="评分"/>
+            android:text="评分" />
 
     </LinearLayout>
 

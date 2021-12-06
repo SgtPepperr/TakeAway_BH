@@ -35,9 +35,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingRight="2dp"
                 android:paddingLeft="5dp"
-                android:paddingTop="5dp">
+                android:paddingTop="5dp"
+                android:paddingRight="2dp">
 
                 <TextView
                     android:id="@+id/good_name"

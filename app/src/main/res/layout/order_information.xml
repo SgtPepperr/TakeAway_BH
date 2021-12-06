@@ -7,10 +7,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -53,10 +53,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <TextView
@@ -64,25 +64,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="订单状态"
-        android:textColor="@color/blue"/>
+        android:textColor="@color/blue" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="地址:"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/info_payment_address"
@@ -103,16 +103,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -125,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="联系电话:"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/info_payment_phone"
@@ -133,16 +133,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -155,23 +155,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
             android:text="备注"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/info_payment_text"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -182,22 +182,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="骑手:"/>
+            android:text="骑手:" />
 
         <TextView
             android:id="@+id/info_rider_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -208,22 +208,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="订单发起时间:"/>
+            android:text="订单发起时间:" />
 
         <TextView
             android:id="@+id/info_take_order_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -234,7 +234,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="订单完成时间:"/>
+            android:text="订单完成时间:" />
 
         <TextView
             android:id="@+id/info_order_finish_time"
@@ -246,10 +246,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -261,7 +261,7 @@
             android:layout_width="80dp"
             android:layout_height="35dp"
             android:gravity="center"
-            android:text="用户评价:"/>
+            android:text="用户评价:" />
 
         <RatingBar
             android:id="@+id/customer_rank"
@@ -277,10 +277,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -292,7 +292,7 @@
             android:layout_width="80dp"
             android:layout_height="35dp"
             android:gravity="center"
-            android:text="骑手评价:"/>
+            android:text="骑手评价:" />
 
         <RatingBar
             android:id="@+id/rider_rank"
@@ -310,7 +310,7 @@
         android:id="@+id/order_rank_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="评价"
-        android:layout_gravity="right"/>
+        android:layout_gravity="right"
+        android:text="评价" />
 
 </LinearLayout>

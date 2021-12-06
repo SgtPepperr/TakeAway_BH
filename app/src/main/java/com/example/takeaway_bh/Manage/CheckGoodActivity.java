@@ -27,9 +27,9 @@ public class CheckGoodActivity extends BaseActivity {
         list = LitePal.where("StoreName=?", intent.getStringExtra("StoreName")).find(Good.class);
 
         binding = ActivityCheckGoodBinding.inflate(getLayoutInflater());
-        LinearLayoutManager layoutManager=new LinearLayoutManager(CheckGoodActivity.this);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(CheckGoodActivity.this);
         binding.recyclerCheckGood.setLayoutManager(layoutManager);
-        CheckGoodAdapter adapter=new CheckGoodAdapter(list);
+        CheckGoodAdapter adapter = new CheckGoodAdapter(list);
         binding.recyclerCheckGood.setAdapter(adapter);
         setContentView(binding.getRoot());
 

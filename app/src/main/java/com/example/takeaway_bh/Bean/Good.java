@@ -3,10 +3,10 @@ package com.example.takeaway_bh.Bean;
 import org.litepal.crud.LitePalSupport;
 
 public class Good extends LitePalSupport {
-    private String name,introduction,StoreName;
+    private String name, introduction, StoreName;
     private int imageId;
     private float price;
-    private int sales,discount;
+    private int sales, discount;
 
     public String getStoreName() {
         return StoreName;

@@ -11,14 +11,16 @@
         android:theme="@style/Theme.TakeAway_BH">
         <activity
             android:name=".Rider.RiderOrderInfo"
-            android:exported="true" />
+            android:exported="true"
+            android:label="骑手订单详细信息页"/>
         <activity
             android:name=".Rider.RiderOrder"
             android:exported="true"
-            android:label="我的订单" />
+            android:label="我的订单"/>
         <activity
             android:name=".Customer.OrderInfo"
-            android:exported="true" />
+            android:exported="true"
+            android:label="订单详细信息页"/>
         <activity
             android:name=".Manage.DeleteGoodActivity"
             android:exported="true"
@@ -41,10 +43,12 @@
             android:label="增加商店" />
         <activity
             android:name=".Customer.PaymentFinish"
-            android:exported="true" />
+            android:exported="true"
+            android:label="订单完成"/>
         <activity
             android:name=".Customer.GoodIndex"
-            android:exported="true" />
+            android:exported="true"
+            android:label="菜品页面"/>
         <activity
             android:name=".Customer.StoreIndex"
             android:exported="true"
@@ -53,7 +57,7 @@
             android:name=".Customer.CustomerIndex"
             android:exported="true"
             android:label="用户主界面"
-            android:launchMode="singleTask" />
+            android:launchMode="singleTask"/>
         <activity
             android:name=".Rider.RiderIndex"
             android:exported="true"
@@ -85,7 +89,6 @@
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

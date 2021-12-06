@@ -18,7 +18,6 @@ import com.example.takeaway_bh.Customer.CustomerIndex;
 import com.example.takeaway_bh.Manage.ManageIndex;
 import com.example.takeaway_bh.Rider.RiderIndex;
 import com.example.takeaway_bh.databinding.ActivityLoginBinding;
-import com.example.takeaway_bh.databinding.ActivityMainBinding;
 
 import org.litepal.LitePal;
 
@@ -71,11 +70,11 @@ public class LoginActivity extends BaseActivity {
             remeberPass.setChecked(true);
         }
 
-        List<User> users= LitePal.findAll(User.class);
-        for(User u:users){
-            Log.d("Login","username is "+u.getUsername());
-            Log.d("Login","password is "+u.getPassword());
-            Log.d("Login","isRider is "+u.isRider());
+        List<User> users = LitePal.findAll(User.class);
+        for (User u : users) {
+            Log.d("Login", "username is " + u.getUsername());
+            Log.d("Login", "password is " + u.getPassword());
+            Log.d("Login", "isRider is " + u.isRider());
         }
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -87,15 +86,15 @@ public class LoginActivity extends BaseActivity {
                 List<User> users = LitePal.where("username=?", account).find(User.class);
                 // 如果账号是admin且密码是123456，就认为登录成功
                 if (users.size() == 0) {
-                    Log.d("Login","user is 0");
+                    Log.d("Login", "user is 0");
                     Toast.makeText(LoginActivity.this, "用户不存在，请先注册", Toast.LENGTH_SHORT).show();
                 } else {
                     String pass = users.get(0).getPassword();
                     if (!pass.equals(password)) {
-                        Log.d("Login","password is wrong");
+                        Log.d("Login", "password is wrong");
                         Toast.makeText(LoginActivity.this, "用户密码不正确", Toast.LENGTH_SHORT).show();
-                    }else if(binding.chooseway.isChecked()!=users.get(0).isRider()){
-                        Log.d("Login","身份不匹配鸭兄弟");
+                    } else if (binding.chooseway.isChecked() != users.get(0).isRider()) {
+                        Log.d("Login", "身份不匹配鸭兄弟");
                         Toast.makeText(LoginActivity.this, "身份不匹配", Toast.LENGTH_SHORT).show();
                     } else {
                         editor = pref.edit();
@@ -111,12 +110,12 @@ public class LoginActivity extends BaseActivity {
                         if (binding.chooseway.isChecked()) {
                             MyApp.setIsRider(true);
                             Intent intent = new Intent(LoginActivity.this, RiderIndex.class);
-                            intent.putExtra("login.username",account);
+                            intent.putExtra("login.username", account);
                             startActivity(intent);
-                        }else{
+                        } else {
                             MyApp.setIsRider(false);
-                            Intent intent=new Intent(LoginActivity.this, CustomerIndex.class);
-                            intent.putExtra("login.username",account);
+                            Intent intent = new Intent(LoginActivity.this, CustomerIndex.class);
+                            intent.putExtra("login.username", account);
                             startActivity(intent);
                         }
 //                        finish();
@@ -133,7 +132,7 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
-        binding.profileHead.setOnClickListener(new View.OnClickListener() {      //进入管理员界面
+        binding.manages.setOnClickListener(new View.OnClickListener() {      //进入管理员界面
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, ManageIndex.class);
@@ -141,15 +140,16 @@ public class LoginActivity extends BaseActivity {
             }
         });
 
+
         binding.forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                List<Store> stores=LitePal.findAll(Store.class);
-                List<Good> goods=LitePal.findAll(Good.class);
-                for(Store s:stores){
+                List<Store> stores = LitePal.findAll(Store.class);
+                List<Good> goods = LitePal.findAll(Good.class);
+                for (Store s : stores) {
                     s.delete();
                 }
-                for(Good g:goods){
+                for (Good g : goods) {
                     g.delete();
                 }
                 new InitLitePal().init();

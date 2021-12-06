@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:gravity="center_vertical"
         android:background="#87ceeb"
+        android:gravity="center_vertical"
         android:paddingLeft="18dp"
         android:paddingRight="18dp">
 
@@ -43,8 +42,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:gravity="center_vertical"
         android:background="@color/design_default_color_background"
+        android:gravity="center_vertical"
         android:paddingLeft="18dp"
         android:paddingRight="18dp">
 
@@ -58,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/user_img"
             android:layout_width="50dp"
@@ -90,41 +90,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/stroke"
-        android:layout_marginLeft="@dimen/spacing_major"/>
+        android:layout_marginLeft="@dimen/spacing_major" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:paddingLeft="18dp"-->
-<!--        android:paddingRight="18dp">-->
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="48dp"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:paddingLeft="18dp"-->
+    <!--        android:paddingRight="18dp">-->
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="昵称"-->
-<!--            android:textSize="16sp" />-->
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="昵称"-->
+    <!--            android:textSize="16sp" />-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/user_nickname"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginRight="20dp"-->
-<!--            android:textSize="16sp"-->
-<!--            android:textColor="@color/black"/>-->
-<!--    </LinearLayout>-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/user_nickname"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginRight="20dp"-->
+    <!--            android:textSize="16sp"-->
+    <!--            android:textColor="@color/black"/>-->
+    <!--    </LinearLayout>-->
 
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="@dimen/stroke" />-->
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/stroke" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -145,8 +145,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -174,8 +174,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:textSize="16sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,10 +9,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="8dp"
         android:background="@color/gray" />
 
     <LinearLayout
@@ -56,19 +55,19 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_marginBottom="18dp"
         android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="18dp"
         android:background="@color/gray" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -81,15 +80,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="地址"/>
+        android:hint="地址" />
 
     <EditText
         android:id="@+id/payment_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:ems="10"
-        android:hint="联系电话"/>
+        android:hint="联系电话"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/payment_text"
@@ -99,12 +98,12 @@
 
     <Button
         android:id="@+id/finish_payment"
-        android:background="@drawable/button_blue"
         android:layout_width="match_parent"
         android:layout_height="@dimen/cell_normal"
         android:layout_marginLeft="@dimen/spacing_major"
-        android:layout_marginRight="@dimen/spacing_major"
         android:layout_marginTop="50dp"
+        android:layout_marginRight="@dimen/spacing_major"
+        android:background="@drawable/button_blue"
         android:text="下单" />
 
 </LinearLayout>
