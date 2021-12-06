@@ -77,9 +77,9 @@
                     <TextView
                         android:id="@+id/foods_description_text"
                         android:layout_width="match_parent"
-                        android:layout_height="99dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="introduction"
+                        android:text=""
                         android:textSize="24sp" />
 
                 </LinearLayout>

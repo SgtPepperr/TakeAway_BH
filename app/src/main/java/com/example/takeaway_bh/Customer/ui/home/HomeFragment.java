@@ -14,10 +14,15 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.takeaway_bh.Bean.Address;
+import com.example.takeaway_bh.Bean.User;
 import com.example.takeaway_bh.Customer.ChangeAddress;
 import com.example.takeaway_bh.Customer.CustomerIndex;
+import com.example.takeaway_bh.MyApp;
 import com.example.takeaway_bh.R;
 import com.example.takeaway_bh.databinding.FragmentHomeBinding;
+
+import org.litepal.LitePal;
 
 
 public class HomeFragment extends Fragment {
@@ -36,10 +41,20 @@ public class HomeFragment extends Fragment {
 
         root = binding.getRoot();
 
-        CustomerIndex activity= (CustomerIndex) getActivity();
-        username= activity.username;
+        CustomerIndex activity = (CustomerIndex) getActivity();
+        username = activity.username;
 
         binding.userId.setText(username);
+
+        if (MyApp.isIsRider()) {
+            binding.userIfRider.setText("是");
+        } else {
+            binding.userIfRider.setText("否");
+        }
+
+        Address address = LitePal.where("userName is ?", MyApp.getUserName()).findFirst(Address.class);
+        if (address != null)
+            binding.userAddress.setText(address.getAddress());
 
         return root;
     }

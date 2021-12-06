@@ -5,23 +5,49 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
+import com.example.takeaway_bh.Bean.Address;
 import com.example.takeaway_bh.Customer.ui.home.HomeFragment;
+import com.example.takeaway_bh.MyApp;
 import com.example.takeaway_bh.R;
+import com.example.takeaway_bh.databinding.ActivityChangeAddressBinding;
+
+import org.litepal.LitePal;
 
 public class ChangeAddress extends AppCompatActivity {
+
+    private ActivityChangeAddressBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_address);
+        binding = ActivityChangeAddressBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        View view = findViewById(R.id.change_address_button);
-        view.setOnClickListener(new View.OnClickListener() {
+        Address address = LitePal.where("userName is ?", MyApp.getUserName()).findFirst(Address.class);
+        if (address != null)
+            binding.oldAddress.setText(address.getAddress());
+
+
+        binding.changeAddressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ChangeAddress.this, HomeFragment.class);
-                startActivity(intent);
+
+                String NewAddress = binding.newParent.getText().toString();
+                if (NewAddress.equals("")) {
+                    Toast.makeText(ChangeAddress.this,"请输入新地址",Toast.LENGTH_LONG).show();
+                } else {
+                    if(address!=null)
+                        address.delete();
+                    Address add=new Address();
+                    add.setAddress(NewAddress);
+                    add.setUserName(MyApp.getUserName());
+                    add.save();
+                    Intent intent = new Intent(ChangeAddress.this, CustomerIndex.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
