@@ -37,7 +37,9 @@ public class RegisterActivity extends BaseActivity {
                 String password = binding.password.getText().toString();
                 String password2 = binding.password2.getText().toString();
                 boolean isRider = binding.chooseway.isChecked();
-                if (!password.equals(password2)) {
+                if(username.equals("")||password.equals("")||password2.equals("")){
+                    Toast.makeText(RegisterActivity.this, "请完整填写信息", Toast.LENGTH_SHORT).show();
+                } else if (!password.equals(password2)) {
                     Toast.makeText(RegisterActivity.this, "两次输入密码不一致，请重新输入", Toast.LENGTH_SHORT).show();
                 } else {
                     List<User> users = LitePal.where("username=?", username).find(User.class);
